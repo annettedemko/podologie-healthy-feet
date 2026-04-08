@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Home -->
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/de/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.healthyfeet-podologie.de/de/" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/en/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/ru/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Services -->
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/de/leistungen</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/leistungen" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/services" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/uslugi" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/en/services</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/leistungen" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/services" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/uslugi" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/ru/uslugi</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/leistungen" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/services" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/uslugi" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Locations -->
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/de/standorte</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/standorte" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/locations" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/lokatsii" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/en/locations</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/standorte" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/locations" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/lokatsii" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/ru/lokatsii</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/standorte" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/locations" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/lokatsii" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Booking -->
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/de/termin</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/termin" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/appointment" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/zapis" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/en/appointment</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/termin" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/appointment" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/zapis" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/ru/zapis</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/termin" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/appointment" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/zapis" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/de/ueber-uns</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/ueber-uns" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/about-us" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/o-nas" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/en/about-us</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/ueber-uns" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/about-us" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/o-nas" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/ru/o-nas</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/ueber-uns" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/about-us" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/o-nas" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/de/blog</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/blog" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/blog" />
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/en/blog</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/blog" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/blog" />
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/ru/blog</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/blog" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/blog" />
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Articles (same slugs across languages) -->
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/de/blog/was-ist-podologie</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/blog/was-ist-podologie" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/blog/was-ist-podologie" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/blog/was-ist-podologie" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/de/blog/nagelpilz-erkennen-behandeln</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/blog/nagelpilz-erkennen-behandeln" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/blog/nagelpilz-erkennen-behandeln" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/blog/nagelpilz-erkennen-behandeln" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/de/blog/diabetischer-fuss-vorsorge</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/blog/diabetischer-fuss-vorsorge" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/blog/diabetischer-fuss-vorsorge" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/blog/diabetischer-fuss-vorsorge" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/de/blog/eingewachsener-nagel-was-tun</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/blog/eingewachsener-nagel-was-tun" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/blog/eingewachsener-nagel-was-tun" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/blog/eingewachsener-nagel-was-tun" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/de/blog/warzen-kryotherapie</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/blog/warzen-kryotherapie" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/blog/warzen-kryotherapie" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/blog/warzen-kryotherapie" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/de/blog/fusspflege-im-winter</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/blog/fusspflege-im-winter" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/blog/fusspflege-im-winter" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/blog/fusspflege-im-winter" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/de/blog/krankenkasse-podologie</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/blog/krankenkasse-podologie" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/blog/krankenkasse-podologie" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/blog/krankenkasse-podologie" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/de/blog/komplexbehandlung-erklaert</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/blog/komplexbehandlung-erklaert" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/blog/komplexbehandlung-erklaert" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/blog/komplexbehandlung-erklaert" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/de/kontakt</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/kontakt" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/contact" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/kontakty" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/kontakt" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/contact" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/kontakty" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/ru/kontakty</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/kontakt" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/contact" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/kontakty" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FAQ -->
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/de/faq</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/faq" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/faq" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/voprosy" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/en/faq</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/faq" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/faq" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/voprosy" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/ru/voprosy</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/faq" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/faq" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/voprosy" />
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Imprint -->
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/de/impressum</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/impressum" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/imprint" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/impressum" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/en/imprint</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/impressum" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/imprint" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/impressum" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/ru/impressum</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/impressum" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/imprint" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/impressum" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Privacy -->
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/de/datenschutz</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/datenschutz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/politika-konfidentsialnosti" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/en/privacy-policy</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/datenschutz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/politika-konfidentsialnosti" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.healthyfeet-podologie.de/ru/politika-konfidentsialnosti</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.healthyfeet-podologie.de/de/datenschutz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.healthyfeet-podologie.de/en/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.healthyfeet-podologie.de/ru/politika-konfidentsialnosti" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

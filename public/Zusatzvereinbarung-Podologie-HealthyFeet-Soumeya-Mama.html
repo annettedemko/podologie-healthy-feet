@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zusatzvereinbarung – Podologische Praxis Healthy Feet</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+    :root {
+      --gold: #b8a272;
+      --gold-light: #d4c49a;
+      --text: #1a1a1a;
+      --text-muted: #6b7280;
+      --border: #e5e7eb;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      font-size: 10pt;
+      line-height: 1.65;
+      color: var(--text);
+      background: #fff;
+    }
+
+    /* ══════════════ COVER PAGE ══════════════ */
+    .cover {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      page-break-after: always;
+      padding: 70mm 20mm 40mm;
+    }
+
+    .cover::before {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 3px;
+      background: var(--gold);
+      border-radius: 2px;
+      margin-bottom: 24px;
+    }
+
+    .cover-label {
+      font-size: 8pt;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .cover-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 26pt;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 6px;
+      letter-spacing: -0.02em;
+    }
+
+    .cover-subtitle {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 11pt;
+      font-style: italic;
+      color: var(--text-muted);
+      margin-bottom: 48px;
+    }
+
+    .cover-divider {
+      width: 40px;
+      height: 3px;
+      background: var(--gold);
+      border-radius: 2px;
+      margin: 0 auto 48px;
+    }
+
+    .cover-company {
+      font-size: 12pt;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .cover-address {
+      font-size: 9pt;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .cover-date {
+      margin-top: 48px;
+      font-size: 8pt;
+      letter-spacing: 0.2em;
+      color: var(--text-muted);
+    }
+
+    /* ══════════════ RUNNING HEADER ══════════════ */
+    .running-header {
+      font-size: 7pt;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-align: center;
+      padding-bottom: 10px;
+      margin-bottom: 18px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ══════════════ BODY CONTENT ══════════════ */
+    .body-content {
+      padding: 0;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 11pt;
+      font-weight: 700;
+      color: var(--text);
+      margin-top: 22px;
+      margin-bottom: 6px;
+      page-break-after: avoid;
+    }
+
+    p {
+      font-size: 10pt;
+      line-height: 1.65;
+      color: var(--text);
+      margin-bottom: 5px;
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    .party-block {
+      margin: 14px 0;
+    }
+    .party-block .role {
+      font-size: 9pt;
+      font-style: italic;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .party-block .name {
+      font-weight: 600;
+      font-size: 10.5pt;
+    }
+    .party-block .detail {
+      font-size: 9.5pt;
+      color: var(--text);
+    }
+
+    .between-text {
+      font-size: 10pt;
+      color: var(--text);
+      margin: 8px 0 2px;
+    }
+
+    /* Section groups — keep title + content together */
+    .section-group {
+      page-break-inside: avoid;
+    }
+
+    /* Lists as plain paragraphs — no position/pseudo to avoid Puppeteer reflow bug */
+    .cost-list {
+      margin: 6px 0 10px 0;
+    }
+    .cost-item {
+      font-size: 10pt;
+      line-height: 1.65;
+      margin-bottom: 1px;
+      padding-left: 16px;
+      text-indent: -16px;
+    }
+    .cost-item .dash {
+      color: var(--gold);
+      font-weight: 600;
+      margin-right: 6px;
+    }
+
+    /* Table */
+    .staffel-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0 14px;
+      font-size: 9.5pt;
+    }
+    .staffel-table th {
+      text-align: left;
+      font-weight: 600;
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      padding: 6px 10px;
+      border-bottom: 2px solid var(--gold-light);
+    }
+    .staffel-table td {
+      padding: 6px 10px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+    .staffel-table tr:last-child td {
+      border-bottom: 2px solid var(--gold-light);
+    }
+    .staffel-table .highlight {
+      font-weight: 600;
+      color: var(--gold);
+    }
+
+    /* Signatures */
+    .signature-section {
+      margin-top: 30px;
+    }
+    .signature-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 28px;
+    }
+    .signature-block { flex: 1; }
+    .signature-line {
+      width: 100%;
+      height: 1px;
+      background: var(--text);
+      margin-bottom: 5px;
+    }
+    .signature-label {
+      font-size: 9pt;
+      color: var(--text-muted);
+    }
+
+    .dots-divider {
+      text-align: center;
+      margin: 24px 0 16px;
+      color: var(--text-muted);
+      letter-spacing: 1em;
+      font-size: 8pt;
+    }
+
+    .footnote {
+      font-size: 7.5pt;
+      color: var(--text-muted);
+      margin-top: 28px;
+      padding-top: 10px;
+      border-top: 1px solid var(--gold-light);
+      line-height: 1.5;
+    }
+    .footnote sup { font-size: 6pt; }
+
+    /* Page break helper */
+    .page-break {
+      page-break-before: always;
+    }
+
+    /* ══════════════ FOOTER (in-flow for screen) ══════════════ */
+
+    /* ══════════════ SCREEN PREVIEW ══════════════ */
+    @media screen {
+      body {
+        background: #e8e8e8;
+        padding: 30px 0;
+        max-width: 210mm;
+        margin: 0 auto;
+      }
+      .cover, .body-content, .page-break-section {
+        background: #fff;
+        margin: 0 auto 30px;
+        padding: 25mm;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+        border-radius: 2px;
+      }
+    }
+
+    @media print {
+      .inline-footer { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════ COVER ═══════════════ -->
+  <div class="cover">
+    <div class="cover-label">VERTRAGSDOKUMENT</div>
+    <h1 class="cover-title">ZUSATZVEREINBARUNG</h1>
+    <div class="cover-subtitle">Fortbildungs- und Rückzahlungsvereinbarung</div>
+    <div class="cover-divider"></div>
+    <div class="cover-company">Podologische Praxis Healthy Feet</div>
+    <div class="cover-address">
+      Leo Ametchan Schmidbaur<br>
+      Donauwörther Str. 49 &middot; 86154 Augsburg
+    </div>
+    <div class="cover-date">Stand: März 2026</div>
+
+  </div>
+
+  <!-- ═══════════════ BODY — flows naturally across pages ═══════════════ -->
+  <div class="body-content">
+    <div class="running-header">
+      PODOLOGISCHE PRAXIS HEALTHY FEET &middot; ZUSATZVEREINBARUNG
+    </div>
+
+    <h2 style="font-family: 'Playfair Display', Georgia, serif; font-size: 12pt; font-weight: 700; text-align: center; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.04em;">
+      Zusatzvereinbarung zur berufsbegleitenden Podologie-Ausbildung
+    </h2>
+    <p style="text-align: center; font-size: 9pt; color: var(--text-muted); margin-bottom: 18px;">
+      (Fortbildungs- und Rückzahlungsvereinbarung)
+    </p>
+
+    <p class="between-text">Zwischen</p>
+    <div class="party-block">
+      <div class="name">Leo Ametchan Schmidbaur</div>
+      <div class="detail">handelnd unter der Bezeichnung</div>
+      <div class="detail"><strong>Podologische Praxis Healthy Feet</strong></div>
+      <div class="detail">Donauwörther Str. 49, 86154 Augsburg</div>
+      <div class="role">– im Folgenden: „Arbeitgeber"<sup>1</sup> –</div>
+    </div>
+
+    <p class="between-text">und</p>
+    <div class="party-block">
+      <div class="name">Soumeya Mama</div>
+      <div class="detail">geb. am 21.08.2005</div>
+      <div class="detail">Helsinkistraße 21, 81829 München</div>
+      <div class="role">– im Folgenden: „Arbeitnehmerin" –</div>
+    </div>
+
+    <p style="margin-top: 12px;">wird folgende Vereinbarung getroffen:</p>
+
+    <!-- § 1 -->
+    <div class="section-group">
+    <h3 class="section-title">§ 1 – Gegenstand der Vereinbarung</h3>
+    <p>Der Arbeitgeber unterstützt die Arbeitnehmerin im Rahmen der berufsbegleitenden Ausbildung zur Podologin.</p>
+    <p>Diese Unterstützung umfasst insbesondere:</p>
+    <div class="cost-list">
+      <p class="cost-item"><span class="dash">–</span>Fahrtkosten (ca. 100–200 € monatlich)</p>
+      <p class="cost-item"><span class="dash">–</span>Unterkunftskosten (ca. 150 € monatlich)</p>
+      <p class="cost-item"><span class="dash">–</span>Materialkosten (ca. 55–65 € monatlich)</p>
+      <p class="cost-item"><span class="dash">–</span>Bereitstellung von Infrastruktur, Geräten und Verbrauchsmaterialien</p>
+      <p class="cost-item"><span class="dash">–</span>Fachliche Anleitung, Einarbeitung und kontinuierliche Betreuung</p>
+      <p class="cost-item"><span class="dash">–</span>Organisatorische und fachliche Begleitung der Ausbildung</p>
+    </div>
+    <p>Die Gesamtkosten dieser Unterstützung werden pauschal mit <strong>12.000&nbsp;€</strong> angesetzt. Die genannte Summe stellt eine pauschale und realistische Schätzung der vom Arbeitgeber getragenen Gesamtaufwendungen dar.</p>
+    </div>
+
+    <!-- § 2 -->
+    <h3 class="section-title">§ 2 – Bindungsdauer</h3>
+    <p>Die Arbeitnehmerin verpflichtet sich, nach erfolgreichem Abschluss der Ausbildung für einen Zeitraum von <strong>36&nbsp;Monaten</strong> im Unternehmen tätig zu bleiben. Die Bindungsdauer beginnt mit erfolgreichem Abschluss der Ausbildung.</p>
+
+    <!-- § 3 -->
+    <div class="section-group">
+    <h3 class="section-title">§ 3 – Rückzahlungspflicht</h3>
+    <p>Beendet die Arbeitnehmerin das Arbeitsverhältnis vor Ablauf der Bindungsdauer</p>
+    <div class="cost-list">
+      <p class="cost-item"><span class="dash">–</span>auf eigenen Wunsch oder</p>
+      <p class="cost-item"><span class="dash">–</span>aus einem von ihr zu vertretenden Grund,</p>
+    </div>
+    <p>so ist sie verpflichtet, die vom Arbeitgeber übernommenen Kosten anteilig gemäß §&nbsp;4 zurückzuzahlen.</p>
+    <p>Dies gilt auch, wenn die Ausbildung vorzeitig aus von der Arbeitnehmerin zu vertretenden Gründen abgebrochen wird.</p>
+    </div>
+
+    <!-- § 4 -->
+    <h3 class="section-title">§ 4 – Staffelung der Rückzahlung</h3>
+    <p>Die Rückzahlungspflicht reduziert sich wie folgt:</p>
+    <table class="staffel-table">
+      <thead>
+        <tr>
+          <th>Zeitpunkt</th>
+          <th>Rückzahlung</th>
+          <th>Betrag</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Während der Ausbildung</td>
+          <td>100 %</td>
+          <td>12.000 €</td>
+        </tr>
+        <tr>
+          <td>Nach Abschluss + 12 Monate</td>
+          <td>66 %</td>
+          <td>7.920 €</td>
+        </tr>
+        <tr>
+          <td>Nach Abschluss + 24 Monate</td>
+          <td>33 %</td>
+          <td>3.960 €</td>
+        </tr>
+        <tr>
+          <td>Nach Abschluss + 36 Monate</td>
+          <td class="highlight">0 %</td>
+          <td class="highlight">0 €</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- § 5 -->
+    <div class="section-group">
+    <h3 class="section-title">§ 5 – Ausnahmen</h3>
+    <p>Eine Rückzahlungspflicht entfällt, wenn:</p>
+    <div class="cost-list">
+      <p class="cost-item"><span class="dash">–</span>der Arbeitgeber kündigt, ohne dass ein Fehlverhalten der Arbeitnehmerin vorliegt</p>
+      <p class="cost-item"><span class="dash">–</span>die Arbeitnehmerin aus gesundheitlichen Gründen dauerhaft nicht arbeiten kann</p>
+      <p class="cost-item"><span class="dash">–</span>die Ausbildung aus Gründen nicht abgeschlossen werden kann, die nicht von der Arbeitnehmerin zu vertreten sind</p>
+    </div>
+    </div>
+
+    <!-- § 6 -->
+    <h3 class="section-title">§ 6 – Fälligkeit</h3>
+    <p>Die Rückzahlung ist innerhalb von <strong>3&nbsp;Monaten</strong> nach Beendigung des Arbeitsverhältnisses fällig.</p>
+    <p>Eine Ratenzahlung kann vereinbart werden.</p>
+
+    <!-- ═══════════════ PAGE 4: §7 + SIGNATURES ═══════════════ -->
+    <div style="page-break-before: always;"></div>
+
+    <!-- § 7 -->
+    <h3 class="section-title" style="margin-top: 0;">§ 7 – Schlussbestimmungen</h3>
+    <p>Diese Vereinbarung ergänzt den bestehenden Arbeitsvertrag vom <strong>Februar 2026</strong>. Im Übrigen gelten die Regelungen des Arbeitsvertrages unverändert fort.</p>
+    <p>Änderungen und Ergänzungen bedürfen der Schriftform. Dies gilt auch für eine Änderung dieser Schriftformklausel.</p>
+
+
+    <div class="signature-section">
+      <div class="signature-row">
+        <div class="signature-block">
+          <div class="signature-line"></div>
+          <div class="signature-label">(Ort, Datum)</div>
+        </div>
+        <div class="signature-block">
+          <div class="signature-line"></div>
+          <div class="signature-label">(Ort, Datum)</div>
+        </div>
+      </div>
+
+      <div style="height: 20px;"></div>
+
+      <div class="signature-row">
+        <div class="signature-block">
+          <div class="signature-line"></div>
+          <div class="signature-label">(Arbeitgeber)</div>
+        </div>
+        <div class="signature-block">
+          <div class="signature-line"></div>
+          <div class="signature-label">(Arbeitnehmerin)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dots-divider">&bull; &nbsp; &bull; &nbsp; &bull;</div>
+
+    <div class="footnote">
+      <sup>1</sup> Aus Gründen der besseren Lesbarkeit wird im Text ausschließlich die männliche Form verwendet. Damit sind alle Geschlechter einbezogen.<br><br>
+      <em>Ergänzende Vereinbarung zum Arbeitsvertrag vom Februar 2026 – individuell erstellt für die Podologische Praxis Healthy Feet.</em>
+    </div>
+  </div>
+
+</body>
+</html>
