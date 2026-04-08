@@ -90,14 +90,14 @@ export default function Home() {
         </div>
 
         {/* Main hero content — left-aligned, vertically centered */}
-        <div className="flex-1 flex items-start pt-[calc(1.875rem+5rem)] md:pt-[calc(1.875rem+6rem)]">
+        <div className="flex-1 flex items-start pt-[calc(1.875rem+3rem)] md:pt-[calc(1.875rem+6rem)]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
             <div className="max-w-2xl">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/70 backdrop-blur-sm border border-primary/10 text-primary text-sm font-medium mb-4"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 backdrop-blur-sm border border-primary/10 text-primary text-xs sm:text-sm font-medium mb-3 sm:mb-4"
               >
                 <Shield className="w-4 h-4" />
                 {t("home.badge")}
@@ -106,14 +106,14 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.05 }}
-                className="text-sm sm:text-base font-bold tracking-[0.4em] uppercase text-primary mb-3"
+                className="text-xs sm:text-base font-bold tracking-[0.4em] uppercase text-primary mb-2 sm:mb-3"
               >
                 Podologie
               </motion.p>
               <AnimatedText
                 text={`${t("home.heroTitle1")} ${t("home.heroTitle2")}`}
                 as="h1"
-                className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold text-foreground leading-[1.05] mb-5"
+                className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold text-foreground leading-[1.05] mb-3 sm:mb-5"
                 delay={0.1}
                 staggerChildren={0.05}
                 once={false}
@@ -122,7 +122,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-base md:text-lg text-muted-foreground/80 leading-relaxed mb-6 max-w-lg"
+                className="text-sm sm:text-base md:text-lg text-muted-foreground/80 leading-relaxed mb-4 sm:mb-6 max-w-lg"
               >
                 {t("home.heroDescription")}
               </motion.p>
@@ -130,7 +130,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="flex flex-col sm:flex-row gap-4"
+                className="flex flex-col sm:flex-row gap-3"
               >
                 <MagneticButton strength={8}>
                   <LocalizedLink to="booking">
@@ -160,10 +160,10 @@ export default function Home() {
         transition={{ duration: 1, delay: 0.6 }}
         className="relative z-20 -mt-16 pb-4"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-center gap-8 md:gap-16 text-sm md:text-base text-muted-foreground/70">
-          <div className="flex items-center gap-2.5"><Shield className="w-5 h-5 text-primary/50" /> {t("home.trustInsurance")}</div>
-          <div className="flex items-center gap-2.5"><MapPin className="w-5 h-5 text-primary/50" /> {t("home.trustLocations")}</div>
-          <div className="flex items-center gap-2.5"><Clock className="w-5 h-5 text-primary/50" /> {t("home.trustFlexible")}</div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-center gap-4 sm:gap-8 md:gap-16 text-xs sm:text-sm md:text-base text-muted-foreground/70">
+          <div className="flex items-center gap-2"><Shield className="w-4 h-4 sm:w-5 sm:h-5 text-primary/50" /> {t("home.trustInsurance")}</div>
+          <div className="flex items-center gap-2"><MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-primary/50" /> {t("home.trustLocations")}</div>
+          <div className="flex items-center gap-2"><Clock className="w-4 h-4 sm:w-5 sm:h-5 text-primary/50" /> {t("home.trustFlexible")}</div>
         </div>
       </motion.div>
 
