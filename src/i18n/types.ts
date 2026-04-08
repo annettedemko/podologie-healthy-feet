@@ -100,6 +100,13 @@ export interface Translations {
   "services.title": string;
   "services.description": string;
   "services.insuranceBadge": string;
+  "services.privatBadge": string;
+  "services.verordnungBadge": string;
+  "services.hinweisTitle": string;
+  "services.hinweisText": string;
+  "services.praxenTitle": string;
+  "services.praxenDescription": string;
+  "services.praxenButton": string;
 
   // Locations Page
   "locations.seoTitle": string;

@@ -90,14 +90,14 @@ export default function Home() {
         </div>
 
         {/* Main hero content — left-aligned, vertically centered */}
-        <div className="flex-1 flex items-center pt-[calc(1.875rem+4rem)] md:pt-[calc(1.875rem+5rem)]">
+        <div className="flex-1 flex items-start pt-[calc(1.875rem+5rem)] md:pt-[calc(1.875rem+6rem)]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
             <div className="max-w-2xl">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/70 backdrop-blur-sm border border-primary/10 text-primary text-sm font-medium mb-6"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/70 backdrop-blur-sm border border-primary/10 text-primary text-sm font-medium mb-4"
               >
                 <Shield className="w-4 h-4" />
                 {t("home.badge")}
@@ -106,14 +106,14 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.05 }}
-                className="text-sm sm:text-base font-bold tracking-[0.4em] uppercase text-primary mb-5"
+                className="text-sm sm:text-base font-bold tracking-[0.4em] uppercase text-primary mb-3"
               >
                 Podologie
               </motion.p>
               <AnimatedText
                 text={`${t("home.heroTitle1")} ${t("home.heroTitle2")}`}
                 as="h1"
-                className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold text-foreground leading-[1.05] mb-8"
+                className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold text-foreground leading-[1.05] mb-5"
                 delay={0.1}
                 staggerChildren={0.05}
                 once={false}
@@ -122,7 +122,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-lg md:text-xl text-muted-foreground/80 leading-relaxed mb-8 max-w-lg"
+                className="text-base md:text-lg text-muted-foreground/80 leading-relaxed mb-6 max-w-lg"
               >
                 {t("home.heroDescription")}
               </motion.p>
@@ -134,14 +134,14 @@ export default function Home() {
               >
                 <MagneticButton strength={8}>
                   <LocalizedLink to="booking">
-                    <Button size="lg" className="rounded-full px-12 text-lg gap-2 h-14 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all duration-500">
+                    <Button size="lg" className="rounded-full px-10 text-base gap-2 h-12 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all duration-500">
                       {t("header.bookAppointment")} <ArrowRight className="w-5 h-5" />
                     </Button>
                   </LocalizedLink>
                 </MagneticButton>
                 <MagneticButton strength={5}>
                   <LocalizedLink to="locations">
-                    <Button variant="outline" size="lg" className="rounded-full px-12 text-lg gap-2 h-14 bg-white/60 backdrop-blur-sm hover:bg-white/80 hover:shadow-lg transition-all duration-500">
+                    <Button variant="outline" size="lg" className="rounded-full px-10 text-base gap-2 h-12 bg-white/60 backdrop-blur-sm hover:bg-white/80 hover:shadow-lg transition-all duration-500">
                       <MapPin className="w-5 h-5" /> {t("home.ourLocations")}
                     </Button>
                   </LocalizedLink>
@@ -151,20 +151,21 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Trust Bar — pinned to bottom of hero */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.6 }}
-          className="relative z-10 pb-6"
-        >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-center gap-8 md:gap-16 text-sm md:text-base text-muted-foreground/70">
-            <div className="flex items-center gap-2.5"><Shield className="w-5 h-5 text-primary/50" /> {t("home.trustInsurance")}</div>
-            <div className="flex items-center gap-2.5"><MapPin className="w-5 h-5 text-primary/50" /> {t("home.trustLocations")}</div>
-            <div className="flex items-center gap-2.5"><Clock className="w-5 h-5 text-primary/50" /> {t("home.trustFlexible")}</div>
-          </div>
-        </motion.div>
       </section>
+
+      {/* Trust Bar — overlaps hero bottom */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.6 }}
+        className="relative z-20 -mt-16 pb-4"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-center gap-8 md:gap-16 text-sm md:text-base text-muted-foreground/70">
+          <div className="flex items-center gap-2.5"><Shield className="w-5 h-5 text-primary/50" /> {t("home.trustInsurance")}</div>
+          <div className="flex items-center gap-2.5"><MapPin className="w-5 h-5 text-primary/50" /> {t("home.trustLocations")}</div>
+          <div className="flex items-center gap-2.5"><Clock className="w-5 h-5 text-primary/50" /> {t("home.trustFlexible")}</div>
+        </div>
+      </motion.div>
 
       {/* Locations */}
       <section id="standorte" className="py-24 md:py-32 relative overflow-hidden bg-white">
@@ -267,11 +268,16 @@ export default function Home() {
                   <div className="p-6">
                   <h3 className="text-lg font-semibold text-foreground mb-2">{service.translations[lang].title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{service.translations[lang].shortDesc}</p>
-                  {service.kassenleistung && (
-                    <span className="inline-flex items-center gap-1 mt-3 text-xs text-primary font-medium">
-                      <Shield className="w-3 h-3" /> {t("home.insuranceBadge")}
+                  <div className="flex flex-wrap gap-2 mt-3">
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-blue-50 text-blue-600 text-xs font-medium">
+                      {t("services.privatBadge")}
                     </span>
-                  )}
+                    {service.mitVerordnung && (
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-green-50 text-green-600 text-xs font-medium">
+                        {t("services.verordnungBadge")}
+                      </span>
+                    )}
+                  </div>
                   </div>
                 </LocalizedLink>
               </AnimateOnScroll>

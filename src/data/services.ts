@@ -14,7 +14,7 @@ export interface Service {
   id: string;
   icon: LucideIcon;
   image: string;
-  kassenleistung: boolean;
+  mitVerordnung: boolean;
   translations: Record<Language, { title: string; shortDesc: string; longDesc: string }>;
 }
 
@@ -23,7 +23,7 @@ export const services: Service[] = [
     id: "komplexbehandlung",
     icon: Footprints,
     image: "/10.png",
-    kassenleistung: true,
+    mitVerordnung: true,
     translations: {
       de: {
         title: "Podologische Komplexbehandlung",
@@ -46,7 +46,7 @@ export const services: Service[] = [
     id: "nagelpilzbehandlung",
     icon: Bug,
     image: "/11.png",
-    kassenleistung: false,
+    mitVerordnung: false,
     translations: {
       de: {
         title: "Nagelpilzbehandlung",
@@ -69,7 +69,7 @@ export const services: Service[] = [
     id: "eingewachsener-nagel",
     icon: AlertTriangle,
     image: "/12.png",
-    kassenleistung: true,
+    mitVerordnung: true,
     translations: {
       de: {
         title: "Eingewachsener Nagel",
@@ -92,7 +92,7 @@ export const services: Service[] = [
     id: "warzenbehandlung",
     icon: Zap,
     image: "/13.png",
-    kassenleistung: false,
+    mitVerordnung: false,
     translations: {
       de: {
         title: "Warzenbehandlung",
@@ -115,7 +115,7 @@ export const services: Service[] = [
     id: "nagelspangenbehandlung",
     icon: Scissors,
     image: "/14.png",
-    kassenleistung: true,
+    mitVerordnung: true,
     translations: {
       de: {
         title: "Nagelspangenbehandlung",
@@ -138,7 +138,7 @@ export const services: Service[] = [
     id: "hornhaut-entfernen",
     icon: Layers,
     image: "/17.png",
-    kassenleistung: false,
+    mitVerordnung: false,
     translations: {
       de: {
         title: "Hornhaut entfernen",
@@ -161,7 +161,7 @@ export const services: Service[] = [
     id: "plasmatherapie",
     icon: Sparkles,
     image: "/16.png",
-    kassenleistung: false,
+    mitVerordnung: false,
     translations: {
       de: {
         title: "Plasmatherapie",

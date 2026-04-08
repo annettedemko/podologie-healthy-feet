@@ -92,6 +92,13 @@ export const de: Translations = {
   "services.title": "Unsere Behandlungen",
   "services.description": "Als kassenzugelassene Podologie-Praxis bieten wir Ihnen ein umfassendes Spektrum an Behandlungen – von der Komplexbehandlung bis zur innovativen Plasmatherapie.",
   "services.insuranceBadge": "Kassenleistung",
+  "services.privatBadge": "Privatleistung",
+  "services.verordnungBadge": "Mit Verordnung möglich",
+  "services.hinweisTitle": "Hinweis",
+  "services.hinweisText": "Viele unserer Behandlungen können bei entsprechender ärztlicher Verordnung von der Krankenkasse übernommen werden. Ohne Verordnung erfolgt die Behandlung als Privatleistung. Gerne beraten wir Sie hierzu persönlich.",
+  "services.praxenTitle": "Unsere Praxen",
+  "services.praxenDescription": "Besuchen Sie uns vor Ort – Preise und weitere Informationen finden Sie auf den jeweiligen Standortseiten.",
+  "services.praxenButton": "Preise & Details",
 
   // Locations Page
   "locations.seoTitle": "Standorte – München & Augsburg",
