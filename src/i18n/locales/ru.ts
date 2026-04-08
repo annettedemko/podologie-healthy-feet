@@ -92,6 +92,13 @@ export const ru: Translations = {
   "services.title": "Наши процедуры",
   "services.description": "Как сертифицированная подологическая практика, мы предлагаем широкий спектр процедур – от комплексного лечения до инновационной плазмотерапии.",
   "services.insuranceBadge": "По страховке",
+  "services.privatBadge": "Частная услуга",
+  "services.verordnungBadge": "По направлению врача",
+  "services.hinweisTitle": "Обратите внимание",
+  "services.hinweisText": "Многие наши процедуры могут быть покрыты страховкой при наличии направления от врача. Без направления лечение проводится как частная услуга. Мы с удовольствием проконсультируем вас лично.",
+  "services.praxenTitle": "Наши клиники",
+  "services.praxenDescription": "Посетите нас лично — цены и подробную информацию вы найдёте на страницах филиалов.",
+  "services.praxenButton": "Цены и подробности",
 
   // Locations Page
   "locations.seoTitle": "Локации – Мюнхен и Аугсбург",

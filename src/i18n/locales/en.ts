@@ -92,6 +92,13 @@ export const en: Translations = {
   "services.title": "Our Treatments",
   "services.description": "As an insurance-approved podiatry practice, we offer a comprehensive range of treatments – from complex treatment to innovative plasma therapy.",
   "services.insuranceBadge": "Insurance Covered",
+  "services.privatBadge": "Private Service",
+  "services.verordnungBadge": "With Prescription Possible",
+  "services.hinweisTitle": "Note",
+  "services.hinweisText": "Many of our treatments can be covered by health insurance with a corresponding medical prescription. Without a prescription, the treatment is provided as a private service. We are happy to advise you personally.",
+  "services.praxenTitle": "Our Practices",
+  "services.praxenDescription": "Visit us in person – prices and further information can be found on the respective location pages.",
+  "services.praxenButton": "Prices & Details",
 
   // Locations Page
   "locations.seoTitle": "Locations – Munich & Augsburg",
