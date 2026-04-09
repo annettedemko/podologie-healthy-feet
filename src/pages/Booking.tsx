@@ -1,14 +1,15 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Info, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import SEOHead from "@/components/SEOHead";
 import PageTransition from "@/components/PageTransition";
 import DoctolibWidget from "@/components/DoctolibWidget";
-import { locations } from "@/data/locations";
+import { getLocation } from "@/data/locations";
 import { useLanguage, LocalizedLink, getLocalizedPath } from "@/i18n";
 
 export default function Booking() {
   const { t, lang } = useLanguage();
+  const muenchen = getLocation("muenchen");
 
   return (
     <PageTransition>
@@ -21,7 +22,7 @@ export default function Booking() {
 
       <section className="py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimateOnScroll className="text-center mb-12">
+          <AnimateOnScroll className="text-center mb-10">
             <h1 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-2">
               {t("booking.title")}
             </h1>
@@ -30,25 +31,37 @@ export default function Booking() {
             </p>
           </AnimateOnScroll>
 
-          {/* Location selector */}
-          <AnimateOnScroll delay={0.1} className="mb-8">
-            <div className="grid sm:grid-cols-2 gap-4">
-              {locations.map((loc) => (
-                <div
-                  key={loc.id}
-                  className={`glass-card rounded-2xl p-5 ${
-                    loc.status === "coming-soon" ? "opacity-50" : ""
-                  }`}
-                >
-                  <h3 className="font-semibold text-foreground mb-1">{loc.city}</h3>
-                  <p className="text-sm text-muted-foreground mb-2">{loc.address}</p>
-                  {loc.status === "coming-soon" && (
-                    <span className="text-xs text-primary font-medium">{t("booking.comingSoon")}</span>
-                  )}
-                </div>
-              ))}
+          {/* Munich-only notice — prominent */}
+          <AnimateOnScroll delay={0.05} className="mb-6">
+            <div className="rounded-2xl border-2 border-primary/30 bg-primary/5 backdrop-blur-sm p-5 sm:p-6 flex gap-4">
+              <div className="shrink-0 w-10 h-10 rounded-full bg-primary/15 flex items-center justify-center">
+                <Info className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <h2 className="font-semibold text-foreground mb-1">
+                  {t("booking.munichOnlyTitle")}
+                </h2>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {t("booking.munichOnlyText")}
+                </p>
+              </div>
             </div>
           </AnimateOnScroll>
+
+          {/* Munich location card */}
+          {muenchen && (
+            <AnimateOnScroll delay={0.1} className="mb-8">
+              <div className="glass-card rounded-2xl p-5 flex items-start gap-4">
+                <div className="shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                  <MapPin className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-1">{muenchen.city}</h3>
+                  <p className="text-sm text-muted-foreground">{muenchen.address}, {muenchen.zip}</p>
+                </div>
+              </div>
+            </AnimateOnScroll>
+          )}
 
           {/* OpticaViva Online-Terminbuchung */}
           <AnimateOnScroll delay={0.2}>

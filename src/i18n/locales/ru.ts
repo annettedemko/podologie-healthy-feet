@@ -141,6 +141,8 @@ export const ru: Translations = {
   "booking.insuranceDescription": "Пожалуйста, принесите на приём направление и страховую карту. Мы рассчитываемся напрямую с вашей страховой компанией.",
   "booking.moreServices": "Подробнее о наших услугах",
   "booking.openExternal": "Записаться в новом окне",
+  "booking.munichOnlyTitle": "Онлайн-запись только для Мюнхена",
+  "booking.munichOnlyText": "Онлайн-запись на приём доступна только для нашего филиала в Мюнхене. Для записи в Аугсбург, пожалуйста, позвоните нам напрямую.",
 
   // About Page
   "about.seoTitle": "О нас",

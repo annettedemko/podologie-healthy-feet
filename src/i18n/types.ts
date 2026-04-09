@@ -149,6 +149,8 @@ export interface Translations {
   "booking.insuranceDescription": string;
   "booking.moreServices": string;
   "booking.openExternal": string;
+  "booking.munichOnlyTitle": string;
+  "booking.munichOnlyText": string;
 
   // About Page
   "about.seoTitle": string;

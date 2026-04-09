@@ -141,6 +141,8 @@ export const de: Translations = {
   "booking.insuranceDescription": "Bringen Sie bitte Ihre Heilmittelverordnung und Versichertenkarte zum Termin mit. Wir rechnen direkt mit Ihrer Krankenkasse ab.",
   "booking.moreServices": "Mehr zu unseren Leistungen",
   "booking.openExternal": "Termin in neuem Fenster buchen",
+  "booking.munichOnlyTitle": "Online-Buchung nur für München",
+  "booking.munichOnlyText": "Die Online-Terminbuchung ist ausschließlich für unsere Praxis in München verfügbar. Für einen Termin in Augsburg rufen Sie uns bitte direkt an.",
 
   // About Page
   "about.seoTitle": "Über uns",

@@ -141,6 +141,8 @@ export const en: Translations = {
   "booking.insuranceDescription": "Please bring your medical prescription and insurance card to your appointment. We bill your health insurance directly.",
   "booking.moreServices": "More about our services",
   "booking.openExternal": "Book appointment in new window",
+  "booking.munichOnlyTitle": "Online booking for Munich only",
+  "booking.munichOnlyText": "Online appointment booking is available exclusively for our Munich practice. For appointments in Augsburg, please call us directly.",
 
   // About Page
   "about.seoTitle": "About Us",
