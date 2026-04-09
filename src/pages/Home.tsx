@@ -89,15 +89,15 @@ export default function Home() {
           <div className="absolute bottom-0 left-0 right-0 h-[55%] bg-gradient-to-t from-white via-white/50 via-30% to-transparent" />
         </div>
 
-        {/* Main hero content — left-aligned, vertically centered */}
-        <div className="flex-1 flex items-start pt-[calc(1.875rem+3rem)] md:pt-[calc(1.875rem+6rem)]">
+        {/* Main hero content — left-aligned, top on all viewports */}
+        <div className="flex-1 flex items-start pt-[calc(1.875rem+5rem)] md:pt-[calc(1.875rem+6rem)] pb-20 md:pb-0">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
             <div className="max-w-2xl">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 backdrop-blur-sm border border-primary/10 text-primary text-xs sm:text-sm font-medium mb-3 sm:mb-4"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 backdrop-blur-sm border border-primary/10 text-primary text-xs sm:text-sm font-medium mb-5 sm:mb-4"
               >
                 <Shield className="w-4 h-4" />
                 {t("home.badge")}
@@ -106,14 +106,14 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.05 }}
-                className="text-xs sm:text-base font-bold tracking-[0.4em] uppercase text-primary mb-2 sm:mb-3"
+                className="text-xs sm:text-base font-bold tracking-[0.4em] uppercase text-primary mb-3 sm:mb-3"
               >
                 Podologie
               </motion.p>
               <AnimatedText
                 text={`${t("home.heroTitle1")} ${t("home.heroTitle2")}`}
                 as="h1"
-                className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold text-foreground leading-[1.05] mb-3 sm:mb-5"
+                className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold text-foreground leading-[1.05] mb-5 sm:mb-5"
                 delay={0.1}
                 staggerChildren={0.05}
                 once={false}
@@ -122,7 +122,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-sm sm:text-base md:text-lg text-muted-foreground/80 leading-relaxed mb-4 sm:mb-6 max-w-lg"
+                className="text-sm sm:text-base md:text-lg text-muted-foreground/80 leading-relaxed mb-7 sm:mb-6 max-w-lg"
               >
                 {t("home.heroDescription")}
               </motion.p>
@@ -132,16 +132,16 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="flex flex-col sm:flex-row gap-3"
               >
-                <MagneticButton strength={8}>
-                  <LocalizedLink to="booking">
-                    <Button size="lg" className="rounded-full px-10 text-base gap-2 h-12 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all duration-500">
+                <MagneticButton strength={8} className="w-full sm:w-auto">
+                  <LocalizedLink to="booking" className="block w-full sm:w-auto">
+                    <Button size="lg" className="w-full sm:w-auto rounded-full px-10 text-base gap-2 h-12 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all duration-500">
                       {t("header.bookAppointment")} <ArrowRight className="w-5 h-5" />
                     </Button>
                   </LocalizedLink>
                 </MagneticButton>
-                <MagneticButton strength={5}>
-                  <LocalizedLink to="locations">
-                    <Button variant="outline" size="lg" className="rounded-full px-10 text-base gap-2 h-12 bg-white/60 backdrop-blur-sm hover:bg-white/80 hover:shadow-lg transition-all duration-500">
+                <MagneticButton strength={5} className="w-full sm:w-auto">
+                  <LocalizedLink to="locations" className="block w-full sm:w-auto">
+                    <Button variant="outline" size="lg" className="w-full sm:w-auto rounded-full px-10 text-base gap-2 h-12 bg-white/60 backdrop-blur-sm hover:bg-white/80 hover:shadow-lg transition-all duration-500">
                       <MapPin className="w-5 h-5" /> {t("home.ourLocations")}
                     </Button>
                   </LocalizedLink>
