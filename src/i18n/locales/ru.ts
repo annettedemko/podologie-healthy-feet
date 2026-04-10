@@ -12,7 +12,7 @@ export const ru: Translations = {
   "nav.services": "Услуги",
   "nav.locations": "Локации",
   "nav.about": "О нас",
-  "nav.blog": "Блог",
+  "nav.blog": "Для пациентов",
   "nav.contact": "Контакты",
   "nav.faq": "Вопросы",
   "nav.booking": "Записаться",
@@ -181,9 +181,9 @@ export const ru: Translations = {
   "about.valueInnovationDesc": "От плазмотерапии до криотерапии – мы делаем ставку на современные методы лечения.",
 
   // Blog Page
-  "blog.seoTitle": "Блог – Знания о здоровье ног",
+  "blog.seoTitle": "Информация для пациентов – Знания о здоровье ног",
   "blog.seoDescription": "Наш подологический блог: советы по уходу за ногами, информация о процедурах, страховые вопросы и актуальные темы о здоровых ногах.",
-  "blog.label": "Блог",
+  "blog.label": "Для пациентов",
   "blog.title": "Знания для здоровых ног",
   "blog.description": "Советы, информация и новости о подологии и здоровье ног.",
   "blog.readMore": "Читать далее",

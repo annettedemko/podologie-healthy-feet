@@ -12,7 +12,7 @@ export const de: Translations = {
   "nav.services": "Leistungen",
   "nav.locations": "Standorte",
   "nav.about": "Über uns",
-  "nav.blog": "Blog",
+  "nav.blog": "Patienteninformation",
   "nav.contact": "Kontakt",
   "nav.faq": "FAQ",
   "nav.booking": "Termin buchen",
@@ -181,9 +181,9 @@ export const de: Translations = {
   "about.valueInnovationDesc": "Von der Plasmatherapie bis zur Kryotherapie – wir setzen auf moderne Behandlungsmethoden.",
 
   // Blog Page
-  "blog.seoTitle": "Blog – Wissen rund um Fußgesundheit",
+  "blog.seoTitle": "Patienteninformation – Wissen rund um Fußgesundheit",
   "blog.seoDescription": "Unser Podologie-Blog: Tipps zur Fußpflege, Informationen zu Behandlungen, Kassenwissen und aktuelle Themen rund um gesunde Füße.",
-  "blog.label": "Blog",
+  "blog.label": "Patienteninformation",
   "blog.title": "Wissen für gesunde Füße",
   "blog.description": "Tipps, Informationen und Neuigkeiten rund um Podologie und Fußgesundheit.",
   "blog.readMore": "Weiterlesen",

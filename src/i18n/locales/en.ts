@@ -12,7 +12,7 @@ export const en: Translations = {
   "nav.services": "Services",
   "nav.locations": "Locations",
   "nav.about": "About Us",
-  "nav.blog": "Blog",
+  "nav.blog": "Patient Info",
   "nav.contact": "Contact",
   "nav.faq": "FAQ",
   "nav.booking": "Book Appointment",
@@ -181,9 +181,9 @@ export const en: Translations = {
   "about.valueInnovationDesc": "From plasma therapy to cryotherapy – we rely on modern treatment methods.",
 
   // Blog Page
-  "blog.seoTitle": "Blog – Knowledge About Foot Health",
+  "blog.seoTitle": "Patient Information – Knowledge About Foot Health",
   "blog.seoDescription": "Our podiatry blog: tips for foot care, information about treatments, insurance knowledge, and current topics about healthy feet.",
-  "blog.label": "Blog",
+  "blog.label": "Patient Information",
   "blog.title": "Knowledge for Healthy Feet",
   "blog.description": "Tips, information, and news about podiatry and foot health.",
   "blog.readMore": "Read More",
