@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Clock, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import BlogCardImage from "@/components/BlogCardImage";
 import SEOHead from "@/components/SEOHead";
@@ -81,9 +81,6 @@ export default function Blog() {
                       <div className="flex items-center gap-3 mb-3">
                         <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-0.5 rounded-full">
                           {tr.category}
-                        </span>
-                        <span className="flex items-center gap-1 text-xs text-muted-foreground">
-                          <Clock className="w-3 h-3" /> {tr.readTime}
                         </span>
                       </div>
                       <h2 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
