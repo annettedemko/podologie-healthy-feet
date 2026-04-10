@@ -75,16 +75,27 @@ export default function UeberUns() {
             </p>
           </AnimateOnScroll>
 
-          <AnimateOnScroll className="glass-card rounded-2xl p-8 text-center max-w-2xl mx-auto mb-24">
-            <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-              <Users className="w-10 h-10 text-primary" />
-            </div>
-            <h3 className="text-lg font-semibold text-foreground mb-2">{t("about.teamMemberName")}</h3>
-            <p className="text-sm text-primary font-medium mb-3">{t("about.teamMemberRole")}</p>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              {t("about.teamMemberBio")}
-            </p>
-          </AnimateOnScroll>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
+            {([
+              { name: "about.teamMemberName", role: "about.teamMemberRole", bio: "about.teamMemberBio", initials: "LS" },
+              { name: "about.teamMember2Name", role: "about.teamMember2Role", bio: "about.teamMember2Bio", initials: "NS" },
+              { name: "about.teamMember3Name", role: "about.teamMember3Role", bio: "about.teamMember3Bio", initials: "HD" },
+              { name: "about.teamMember4Name", role: "about.teamMember4Role", bio: "about.teamMember4Bio", initials: "AB" },
+            ] as const).map((member, i) => (
+              <AnimateOnScroll key={member.name} delay={i * 0.08}>
+                <div className="glass-card rounded-2xl p-6 text-center h-full">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center mx-auto mb-4">
+                    <span className="text-lg font-bold text-primary">{member.initials}</span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-foreground mb-1">{t(member.name)}</h3>
+                  <p className="text-sm text-primary font-medium mb-3">{t(member.role)}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {t(member.bio)}
+                  </p>
+                </div>
+              </AnimateOnScroll>
+            ))}
+          </div>
 
           {/* Values */}
           <AnimateOnScroll className="text-center max-w-2xl mx-auto mb-12">

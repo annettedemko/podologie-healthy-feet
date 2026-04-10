@@ -169,6 +169,15 @@ export interface Translations {
   "about.teamMemberName": string;
   "about.teamMemberRole": string;
   "about.teamMemberBio": string;
+  "about.teamMember2Name": string;
+  "about.teamMember2Role": string;
+  "about.teamMember2Bio": string;
+  "about.teamMember3Name": string;
+  "about.teamMember3Role": string;
+  "about.teamMember3Bio": string;
+  "about.teamMember4Name": string;
+  "about.teamMember4Role": string;
+  "about.teamMember4Bio": string;
   "about.valuesTitle": string;
   "about.valueEmpathyTitle": string;
   "about.valueEmpathyDesc": string;
