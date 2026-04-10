@@ -6,6 +6,7 @@ import blog5 from "@/assets/blog-5.avif";
 import blog6 from "@/assets/blog-6.avif";
 import blog7 from "@/assets/blog-7.avif";
 import blog8 from "@/assets/blog-8.avif";
+import blog9 from "@/assets/blog-9.avif";
 
 import type { Language } from "@/i18n/types";
 
@@ -1196,6 +1197,211 @@ Your doctor issues a therapeutic prescription (Form 13). Health insurance covers
 ## Направление и стоимость
 
 Ваш врач выписывает направление на лечебные процедуры (бланк 13). Страховка покрывает расходы за вычетом установленной законом доплаты. Как аккредитованная практика, мы проводим расчёт напрямую с вашей больничной кассой.`,
+      },
+    },
+  },
+  {
+    slug: "checkliste-diabetischer-fuss",
+    date: "2026-03-17",
+    image: blog9,
+    translations: {
+      de: {
+        title: "Checkliste: Tägliche Fußpflege bei Diabetes",
+        metaDescription:
+          "Praktische Checkliste für die tägliche Fußpflege bei Diabetes. Worauf Sie achten sollten, um Komplikationen zu vermeiden.",
+        category: "Prävention",
+        readTime: "4 Min.",
+        excerpt:
+          "Diabetes erfordert besondere Aufmerksamkeit für Ihre Füße. Mit dieser täglichen Checkliste beugen Sie Komplikationen wirksam vor.",
+        content: `## Warum tägliche Fußpflege bei Diabetes so wichtig ist
+
+Bei Diabetes können Nervenschäden (Neuropathie) und Durchblutungsstörungen dazu führen, dass kleine Verletzungen unbemerkt bleiben und schlecht heilen. Tägliche Kontrolle und richtige Pflege sind der beste Schutz vor ernsthaften Komplikationen.
+
+## Tägliche Kontrolle
+
+Nehmen Sie sich jeden Abend eine Minute Zeit für Ihre Füße:
+
+- **Füße gründlich anschauen** – auch Fußsohlen und zwischen den Zehen (ggf. mit Spiegel)
+- **Auf Veränderungen achten** – Rötungen, Blasen, Risse, Schwellungen, Verfärbungen
+- **Temperatur prüfen** – fühlt sich ein Fuß wärmer oder kälter an als der andere?
+- **Druckstellen bemerken** – neue Schwielen oder Hornhaut können auf schlecht sitzende Schuhe hinweisen
+
+## Waschen und Pflegen
+
+- Füße täglich mit **lauwarmem Wasser** waschen (max. 37°C – mit Thermometer prüfen!)
+- **Nicht länger als 3–5 Minuten** baden – zu langes Einweichen weicht die Haut auf
+- Füße **sorgfältig abtrocknen**, besonders zwischen den Zehen
+- **Regelmäßig eincremen** mit einer harnstoffhaltigen Creme – aber **nicht zwischen den Zehen**
+
+## Nagelpflege
+
+- Nägel **gerade schneiden**, Ecken nicht tief ausschneiden
+- **Keine scharfen Werkzeuge** verwenden (Scheren, Zangen, Hornhauthobel)
+- Bei verdickten oder verformten Nägeln: **professionelle podologische Hilfe** in Anspruch nehmen
+- Nagelfeilen aus Glas oder feiner Körnung bevorzugen
+
+## Schuhe und Strümpfe
+
+- Täglich **saubere Socken** ohne enge Bündchen tragen
+- Socken aus Baumwolle oder Mischgewebe bevorzugen
+- Schuhe **vor dem Anziehen inspizieren** – auf Fremdkörper, Nähte oder Druckstellen prüfen
+- Neue Schuhe **langsam einlaufen** – nie länger als 2 Stunden am Stück
+- **Keine offenen Schuhe** oder Sandalen ohne Fersenriemen
+
+## Das sollten Sie vermeiden
+
+- ❌ **Niemals barfuß laufen** – auch nicht zu Hause
+- ❌ Keine Wärmflaschen oder Heizkissen an den Füßen
+- ❌ Keine Hühneraugenpflaster oder -tinkturen
+- ❌ Keine Selbstbehandlung bei eingewachsenen Nägeln
+- ❌ Nicht an Hornhaut oder Nägeln „herumschneiden"
+
+## Warnsignale – sofort handeln!
+
+Bei diesen Zeichen sollten Sie **umgehend Ihren Podologen oder Arzt kontaktieren**:
+
+1. Offene Stellen oder Wunden, die nicht heilen
+2. Rötungen oder Schwellungen, die zunehmen
+3. Blasenbildung oder nässende Stellen
+4. Verfärbungen der Haut oder Nägel
+5. Ungewöhnlicher Geruch
+6. Plötzliche Schmerzen oder Taubheit
+
+## Regelmäßig zum Podologen
+
+Ergänzen Sie Ihre tägliche Pflege durch **professionelle podologische Behandlungen alle 4–6 Wochen**. Ihr Hausarzt oder Diabetologe kann eine Verordnung ausstellen – die Kosten übernimmt Ihre Krankenkasse.`,
+      },
+      en: {
+        title: "Checklist: Daily Foot Care for Diabetes",
+        metaDescription:
+          "Practical checklist for daily foot care with diabetes. What to look out for to prevent complications.",
+        category: "Prevention",
+        readTime: "4 min.",
+        excerpt:
+          "Diabetes requires special attention for your feet. Use this daily checklist to effectively prevent complications.",
+        content: `## Why Daily Foot Care Is So Important with Diabetes
+
+With diabetes, nerve damage (neuropathy) and circulation problems can cause small injuries to go unnoticed and heal poorly. Daily checks and proper care are the best protection against serious complications.
+
+## Daily Inspection
+
+Take one minute every evening for your feet:
+
+- **Look at your feet thoroughly** – including soles and between toes (use a mirror if needed)
+- **Watch for changes** – redness, blisters, cracks, swelling, discoloration
+- **Check temperature** – does one foot feel warmer or colder than the other?
+- **Notice pressure points** – new calluses may indicate poorly fitting shoes
+
+## Washing and Moisturizing
+
+- Wash feet daily with **lukewarm water** (max. 37°C – check with a thermometer!)
+- **No longer than 3–5 minutes** – prolonged soaking softens the skin
+- **Dry thoroughly**, especially between the toes
+- **Moisturize regularly** with a urea-based cream – but **not between the toes**
+
+## Nail Care
+
+- Cut nails **straight across**, do not cut corners deep
+- **Do not use sharp tools** (scissors, clippers, callus razors)
+- For thickened or deformed nails: **seek professional podiatric help**
+- Prefer glass nail files or fine-grit files
+
+## Shoes and Socks
+
+- Wear **clean socks** daily without tight elastic bands
+- Prefer cotton or blended fabrics
+- **Inspect shoes before wearing** – check for foreign objects, seams, or pressure points
+- **Break in new shoes gradually** – never more than 2 hours at a time
+- **No open shoes** or sandals without heel straps
+
+## What to Avoid
+
+- ❌ **Never walk barefoot** – not even at home
+- ❌ No hot water bottles or heating pads on feet
+- ❌ No corn plasters or tinctures
+- ❌ No self-treatment of ingrown nails
+- ❌ Do not cut or pick at calluses or nails
+
+## Warning Signs – Act Immediately!
+
+If you notice any of these signs, **contact your podiatrist or doctor immediately**:
+
+1. Open sores or wounds that won't heal
+2. Redness or swelling that increases
+3. Blistering or weeping areas
+4. Discoloration of skin or nails
+5. Unusual odor
+6. Sudden pain or numbness
+
+## Regular Podiatry Visits
+
+Complement your daily care with **professional podiatric treatments every 4–6 weeks**. Your family doctor or diabetologist can issue a prescription – costs are covered by your health insurance.`,
+      },
+      ru: {
+        title: "Чеклист: Ежедневный уход за стопами при диабете",
+        metaDescription:
+          "Практический чеклист ежедневного ухода за стопами при диабете. На что обращать внимание, чтобы избежать осложнений.",
+        category: "Профилактика",
+        readTime: "4 мин.",
+        excerpt:
+          "Диабет требует особого внимания к вашим стопам. Этот ежедневный чеклист поможет эффективно предотвратить осложнения.",
+        content: `## Почему ежедневный уход за стопами при диабете так важен
+
+При диабете повреждение нервов (нейропатия) и нарушения кровообращения могут привести к тому, что мелкие травмы остаются незамеченными и плохо заживают. Ежедневный контроль и правильный уход — лучшая защита от серьёзных осложнений.
+
+## Ежедневный осмотр
+
+Уделяйте каждый вечер одну минуту своим стопам:
+
+- **Тщательно осматривайте стопы** — включая подошвы и между пальцами (при необходимости используйте зеркало)
+- **Следите за изменениями** — покраснения, пузыри, трещины, отёки, изменения цвета
+- **Проверяйте температуру** — одна нога теплее или холоднее другой?
+- **Замечайте места давления** — новые мозоли могут указывать на неподходящую обувь
+
+## Мытьё и увлажнение
+
+- Ежедневно мойте ноги **тёплой водой** (макс. 37°C — проверяйте термометром!)
+- **Не более 3–5 минут** — длительное вымачивание размягчает кожу
+- **Тщательно вытирайте**, особенно между пальцами
+- **Регулярно наносите крем** с мочевиной — но **не между пальцами**
+
+## Уход за ногтями
+
+- Стригите ногти **ровно**, не обрезая углы глубоко
+- **Не используйте острые инструменты** (ножницы, кусачки, скребки для мозолей)
+- При утолщённых или деформированных ногтях: **обратитесь к подологу**
+- Предпочитайте стеклянные пилки или пилки мелкой зернистости
+
+## Обувь и носки
+
+- Ежедневно надевайте **чистые носки** без тугих резинок
+- Предпочитайте хлопок или смесовые ткани
+- **Проверяйте обувь перед надеванием** — нет ли посторонних предметов, выступающих швов, мест давления
+- **Разнашивайте новую обувь постепенно** — не более 2 часов подряд
+- **Не носите открытую обувь** или сандалии без задника
+
+## Чего следует избегать
+
+- ❌ **Никогда не ходите босиком** — даже дома
+- ❌ Никаких грелок и электрических подушек для ног
+- ❌ Никаких пластырей и средств от мозолей
+- ❌ Не лечите вросшие ногти самостоятельно
+- ❌ Не обрезайте и не ковыряйте мозоли и ногти
+
+## Тревожные сигналы — действуйте немедленно!
+
+При появлении этих признаков **немедленно обратитесь к подологу или врачу**:
+
+1. Открытые раны, которые не заживают
+2. Нарастающее покраснение или отёк
+3. Пузыри или мокнущие участки
+4. Изменение цвета кожи или ногтей
+5. Необычный запах
+6. Внезапная боль или онемение
+
+## Регулярные визиты к подологу
+
+Дополняйте ежедневный уход **профессиональными подологическими процедурами каждые 4–6 недель**. Ваш семейный врач или диабетолог может выписать направление — расходы покрывает ваша медицинская страховка.`,
       },
     },
   },

@@ -184,6 +184,38 @@ export const faqs: FAQItem[] = [
   {
     translations: {
       de: {
+        question: "Was wird bei der diabetischen Fußbehandlung gemacht?",
+        answer: "Bei der diabetischen Fußbehandlung untersuchen wir zunächst Hautzustand, Durchblutung und Sensibilität. Anschließend erfolgen fachgerechte Nagelbearbeitung, Hornhaut- und Druckstellenentfernung, Hautüberwachung auf Risse oder Verletzungen sowie eine Beratung zur häuslichen Fußpflege. Die Behandlung wird besonders schonend und hygienisch durchgeführt.",
+      },
+      en: {
+        question: "What happens during a diabetic foot treatment?",
+        answer: "During a diabetic foot treatment, we first examine skin condition, circulation, and sensitivity. This is followed by professional nail care, callus and pressure point removal, skin monitoring for cracks or injuries, and advice on home foot care. The treatment is carried out with special care and hygiene.",
+      },
+      ru: {
+        question: "Что включает в себя диабетический осмотр стоп?",
+        answer: "При диабетическом осмотре мы сначала проверяем состояние кожи, кровообращение и чувствительность. Затем проводим профессиональную обработку ногтей, удаление мозолей и мест давления, контроль кожи на наличие трещин или повреждений, а также консультацию по домашнему уходу. Процедура проводится особенно бережно и гигиенично.",
+      },
+    },
+  },
+  {
+    translations: {
+      de: {
+        question: "Wann sollte ich sofort einen Podologen aufsuchen?",
+        answer: "Suchen Sie umgehend professionelle Hilfe bei: offenen Stellen oder Wunden, die nicht heilen, zunehmenden Rötungen oder Schwellungen, Blasenbildung, Verfärbungen der Haut oder Nägel, ungewöhnlichem Geruch oder plötzlichen Schmerzen bzw. Taubheit – besonders als Diabetiker.",
+      },
+      en: {
+        question: "When should I see a podiatrist immediately?",
+        answer: "Seek professional help immediately for: open sores or wounds that won't heal, increasing redness or swelling, blistering, discoloration of skin or nails, unusual odor, or sudden pain or numbness – especially if you have diabetes.",
+      },
+      ru: {
+        question: "Когда нужно срочно обратиться к подологу?",
+        answer: "Срочно обратитесь за профессиональной помощью при: открытых ранах, которые не заживают, нарастающем покраснении или отёке, появлении пузырей, изменении цвета кожи или ногтей, необычном запахе, внезапной боли или онемении – особенно если у вас диабет.",
+      },
+    },
+  },
+  {
+    translations: {
+      de: {
         question: "Was ist Plasmatherapie?",
         answer: "Die Plasmatherapie nutzt physikalisches Kaltplasma zur Behandlung von Nagelpilz, Wunden und Hautinfektionen. Das Verfahren ist schmerzfrei, antimikrobiell und fördert die Heilung. Es ist eine innovative Ergänzung zu klassischen Behandlungsmethoden.",
       },

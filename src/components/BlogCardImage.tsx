@@ -27,6 +27,8 @@ const gradients: Record<string, string> = {
     "linear-gradient(145deg, #eef2ff 0%, #e0e7ff 35%, #dbeafe 70%, #bfdbfe 100%)",
   "komplexbehandlung-erklaert":
     "linear-gradient(155deg, #ecfdf5 0%, #d1fae5 35%, #a7f3d0 60%, #bfdbfe 100%)",
+  "checkliste-diabetischer-fuss":
+    "linear-gradient(125deg, #f0fdf4 0%, #d1fae5 40%, #bbf7d0 65%, #bfdbfe 100%)",
 };
 
 const fallbackGradient =
