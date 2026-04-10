@@ -73,6 +73,7 @@ export default function Blog() {
                       <BlogCardImage
                         slug={post.slug}
                         title={tr.title}
+                        category={tr.category}
                         className="transition-transform duration-500 group-hover:scale-105"
                       />
                     </div>

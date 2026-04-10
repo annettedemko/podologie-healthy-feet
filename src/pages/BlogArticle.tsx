@@ -84,7 +84,7 @@ export default function BlogArticle() {
           {/* Cover image */}
           <AnimateOnScroll delay={0.1}>
             <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/9]">
-              <BlogCardImage slug={post.slug} title={tr.title} />
+              <BlogCardImage slug={post.slug} title={tr.title} category={tr.category} />
             </div>
           </AnimateOnScroll>
 
