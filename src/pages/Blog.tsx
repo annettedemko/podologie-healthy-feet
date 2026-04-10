@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Clock, ArrowRight } from "lucide-react";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
+import BlogCardImage from "@/components/BlogCardImage";
 import SEOHead from "@/components/SEOHead";
 import PageTransition from "@/components/PageTransition";
 import { blogPosts, blogCategories } from "@/data/blog";
@@ -69,11 +70,10 @@ export default function Blog() {
                     className="glass-card rounded-2xl overflow-hidden group hover:shadow-xl transition-all duration-500 block h-full"
                   >
                     <div className="aspect-[16/10] overflow-hidden">
-                      <img
-                        src={post.image}
-                        alt={tr.title}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        loading="lazy"
+                      <BlogCardImage
+                        slug={post.slug}
+                        title={tr.title}
+                        className="transition-transform duration-500 group-hover:scale-105"
                       />
                     </div>
                     <div className="p-5">

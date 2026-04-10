@@ -2,6 +2,7 @@ import { useParams, Navigate } from "react-router-dom";
 import { ArrowLeft, ArrowRight, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
+import BlogCardImage from "@/components/BlogCardImage";
 import SEOHead from "@/components/SEOHead";
 import StructuredData from "@/components/StructuredData";
 import PageTransition from "@/components/PageTransition";
@@ -82,12 +83,8 @@ export default function BlogArticle() {
 
           {/* Cover image */}
           <AnimateOnScroll delay={0.1}>
-            <div className="rounded-2xl overflow-hidden mb-10">
-              <img
-                src={post.image}
-                alt={tr.title}
-                className="w-full aspect-[16/9] object-cover"
-              />
+            <div className="rounded-2xl overflow-hidden mb-10 aspect-[16/9]">
+              <BlogCardImage slug={post.slug} title={tr.title} />
             </div>
           </AnimateOnScroll>
 
