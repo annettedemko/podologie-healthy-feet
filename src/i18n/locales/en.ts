@@ -84,6 +84,9 @@ export const en: Translations = {
   "home.ctaTitle": "Book Your Appointment",
   "home.ctaDescription": "Book conveniently online or call us directly – we look forward to seeing you.",
   "home.ctaButton": "Book Appointment Now",
+  "home.statsExperience": "Years Experience",
+  "home.statsPatients": "Happy Patients",
+  "home.statsTeam": "Podiatrists on Team",
 
   // Services Page
   "services.seoTitle": "Services – Podiatric Treatments",

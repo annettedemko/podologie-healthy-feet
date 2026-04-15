@@ -84,6 +84,9 @@ export const ru: Translations = {
   "home.ctaTitle": "Запишитесь на приём",
   "home.ctaDescription": "Запишитесь удобно онлайн или позвоните нам напрямую – мы будем рады вас видеть.",
   "home.ctaButton": "Записаться сейчас",
+  "home.statsExperience": "Лет опыта",
+  "home.statsPatients": "Довольных пациентов",
+  "home.statsTeam": "Подологов в команде",
 
   // Services Page
   "services.seoTitle": "Услуги – Подологические процедуры",
