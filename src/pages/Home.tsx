@@ -184,9 +184,9 @@ export default function Home() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.6 }}
-        className="relative z-20 -mt-16 pb-6"
+        className="relative z-20 py-8 md:py-0 md:-mt-16 md:pb-6"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 sm:gap-x-8 md:gap-x-10 text-xs sm:text-sm text-muted-foreground/75">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-center gap-x-5 gap-y-2.5 sm:gap-x-8 md:gap-x-10 text-xs sm:text-sm text-muted-foreground/75">
           <div className="flex items-center gap-1.5"><Shield className="w-4 h-4 text-primary/55" /> {t("home.trustInsurance")}</div>
           <div className="flex items-center gap-1.5"><Sparkles className="w-4 h-4 text-primary/55" /> {t("home.statsPrivate")}</div>
           <div className="flex items-center gap-1.5"><MapPin className="w-4 h-4 text-primary/55" /> {t("home.trustLocations")}</div>
