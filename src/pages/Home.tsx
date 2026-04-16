@@ -6,7 +6,6 @@ import MagneticButton from "@/components/MagneticButton";
 import SEOHead from "@/components/SEOHead";
 import PageTransition from "@/components/PageTransition";
 import TiltCard from "@/components/TiltCard";
-import CountUp from "@/components/CountUp";
 import Marquee from "@/components/Marquee";
 import { services } from "@/data/services";
 import { locations } from "@/data/locations";
@@ -194,32 +193,7 @@ export default function Home() {
         </div>
       </motion.div>
 
-      {/* ═══ STATS with count-up ═══ */}
-      <section className="py-16 md:py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {([
-              { end: 5, suffix: "+", label: t("home.statsExperience") },
-              { end: 1000, suffix: "+", label: t("home.statsPatients") },
-              { end: 2, suffix: "", label: t("home.trustLocations") },
-              { end: 4, suffix: "", label: t("home.statsTeam") },
-            ]).map((stat, i) => (
-              <AnimateOnScroll key={i} delay={i * 0.1}>
-                <div>
-                  <CountUp
-                    end={stat.end}
-                    suffix={stat.suffix}
-                    className="text-5xl md:text-6xl font-serif font-bold bg-gradient-to-br from-primary to-clinic-teal bg-clip-text text-transparent block mb-2"
-                  />
-                  <p className="text-sm text-muted-foreground font-medium">{stat.label}</p>
-                </div>
-              </AnimateOnScroll>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══ MARQUEE — treatment names flowing ═══ */}
+{/* ═══ MARQUEE — treatment names flowing ═══ */}
       <div className="border-y border-primary/10 bg-white">
         <Marquee items={marqueeItems} duration={45} />
       </div>
