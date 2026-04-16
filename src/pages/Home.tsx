@@ -1,4 +1,4 @@
-import { ArrowRight, Star, MapPin, Clock, Shield, Heart, Stethoscope, Sparkles, Quote, ChevronDown } from "lucide-react";
+import { ArrowRight, Star, MapPin, Clock, Shield, ShieldCheck, Award, Languages, Heart, Stethoscope, Sparkles, Quote, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import AnimatedText from "@/components/AnimatedText";
@@ -180,31 +180,17 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* ═══ TRUST BAR ═══ */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.6 }}
-        className="relative z-20 -mt-16 pb-4"
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-center gap-4 sm:gap-8 md:gap-16 text-xs sm:text-sm md:text-base text-muted-foreground/70">
-          <div className="flex items-center gap-2"><Shield className="w-4 h-4 sm:w-5 sm:h-5 text-primary/50" /> {t("home.trustInsurance")}</div>
-          <div className="flex items-center gap-2"><MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-primary/50" /> {t("home.trustLocations")}</div>
-          <div className="flex items-center gap-2"><Clock className="w-4 h-4 sm:w-5 sm:h-5 text-primary/50" /> {t("home.trustFlexible")}</div>
-        </div>
-      </motion.div>
-
-      {/* ═══ STATS — 6 credentials in big-number style ═══ */}
-      <section className="py-16 md:py-20 bg-white">
+      {/* ═══ STATS — 6 credentials ═══ */}
+      <section className="py-20 md:py-24 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-6 text-center">
             {/* Kassenzugelassen */}
             <AnimateOnScroll delay={0}>
               <div>
-                <div className="text-5xl md:text-6xl font-serif font-bold bg-gradient-to-br from-primary to-clinic-teal bg-clip-text text-transparent mb-2 leading-none">
-                  ✓
+                <div className="w-20 h-20 mx-auto mb-3 rounded-full bg-gradient-to-br from-primary to-clinic-teal flex items-center justify-center shadow-lg shadow-primary/20">
+                  <ShieldCheck className="w-10 h-10 text-white" strokeWidth={1.8} />
                 </div>
-                <p className="text-sm md:text-base text-muted-foreground font-medium">
+                <p className="text-sm md:text-base text-foreground font-medium">
                   {t("home.trustInsurance")}
                 </p>
               </div>
@@ -213,10 +199,10 @@ export default function Home() {
             {/* Privatpatienten */}
             <AnimateOnScroll delay={0.08}>
               <div>
-                <div className="text-5xl md:text-6xl font-serif font-bold bg-gradient-to-br from-primary to-clinic-teal bg-clip-text text-transparent mb-2 leading-none">
-                  ★
+                <div className="w-20 h-20 mx-auto mb-3 rounded-full bg-gradient-to-br from-primary to-clinic-teal flex items-center justify-center shadow-lg shadow-primary/20">
+                  <Award className="w-10 h-10 text-white" strokeWidth={1.8} />
                 </div>
-                <p className="text-sm md:text-base text-muted-foreground font-medium">
+                <p className="text-sm md:text-base text-foreground font-medium">
                   {t("home.statsPrivate")}
                 </p>
               </div>
@@ -229,7 +215,7 @@ export default function Home() {
                   end={2}
                   className="text-5xl md:text-6xl font-serif font-bold bg-gradient-to-br from-primary to-clinic-teal bg-clip-text text-transparent block mb-2 leading-none"
                 />
-                <p className="text-sm md:text-base text-muted-foreground font-medium">
+                <p className="text-sm md:text-base text-foreground font-medium">
                   {t("home.trustLocations")}
                 </p>
               </div>
@@ -243,7 +229,7 @@ export default function Home() {
                   suffix="+"
                   className="text-5xl md:text-6xl font-serif font-bold bg-gradient-to-br from-primary to-clinic-teal bg-clip-text text-transparent block mb-2 leading-none"
                 />
-                <p className="text-sm md:text-base text-muted-foreground font-medium">
+                <p className="text-sm md:text-base text-foreground font-medium">
                   {t("home.statsPatients")}
                 </p>
               </div>
@@ -252,10 +238,10 @@ export default function Home() {
             {/* Flexible Termine */}
             <AnimateOnScroll delay={0.32}>
               <div>
-                <div className="text-5xl md:text-6xl font-serif font-bold bg-gradient-to-br from-primary to-clinic-teal bg-clip-text text-transparent mb-2 leading-none">
-                  ⏱
+                <div className="w-20 h-20 mx-auto mb-3 rounded-full bg-gradient-to-br from-primary to-clinic-teal flex items-center justify-center shadow-lg shadow-primary/20">
+                  <Clock className="w-10 h-10 text-white" strokeWidth={1.8} />
                 </div>
-                <p className="text-sm md:text-base text-muted-foreground font-medium">
+                <p className="text-sm md:text-base text-foreground font-medium">
                   {t("home.trustFlexible")}
                 </p>
               </div>
@@ -264,11 +250,11 @@ export default function Home() {
             {/* Sprachen */}
             <AnimateOnScroll delay={0.4}>
               <div>
-                <div className="text-3xl md:text-4xl font-serif font-bold bg-gradient-to-br from-primary to-clinic-teal bg-clip-text text-transparent mb-2 leading-tight pt-3">
-                  DE · EN · RU · UA
+                <div className="w-20 h-20 mx-auto mb-3 rounded-full bg-gradient-to-br from-primary to-clinic-teal flex items-center justify-center shadow-lg shadow-primary/20">
+                  <Languages className="w-10 h-10 text-white" strokeWidth={1.8} />
                 </div>
-                <p className="text-sm md:text-base text-muted-foreground font-medium">
-                  {t("home.statsLanguages")}
+                <p className="text-sm md:text-base text-foreground font-medium">
+                  DE · EN · RU · UA
                 </p>
               </div>
             </AnimateOnScroll>
