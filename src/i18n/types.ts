@@ -92,9 +92,6 @@ export interface Translations {
   "home.ctaTitle": string;
   "home.ctaDescription": string;
   "home.ctaButton": string;
-  "home.statsExperience": string;
-  "home.statsPatients": string;
-  "home.statsTeam": string;
 
   // Services Page
   "services.seoTitle": string;

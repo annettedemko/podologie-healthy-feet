@@ -56,7 +56,6 @@ export default {
           "blue-light": "hsl(var(--clinic-blue-light))",
           "blue-dark": "hsl(var(--clinic-blue-dark))",
           teal: "hsl(var(--clinic-teal))",
-          green: "hsl(var(--clinic-green))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
