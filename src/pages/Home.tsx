@@ -201,7 +201,7 @@ export default function Home() {
       </motion.div>
 
       {/* ═══ STATS with count-up ═══ */}
-      <section className="relative z-10 py-16 md:py-20 bg-white/40 backdrop-blur-lg">
+      <section className="relative z-10 py-16 md:py-20 bg-white/25">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {([
@@ -226,12 +226,12 @@ export default function Home() {
       </section>
 
       {/* ═══ MARQUEE — treatment names flowing ═══ */}
-      <div className="relative z-10 border-y border-primary/10 bg-white/50 backdrop-blur-lg">
+      <div className="relative z-10 border-y border-primary/10 bg-white/30">
         <Marquee items={marqueeItems} duration={45} />
       </div>
 
       {/* ═══ LOCATIONS ═══ */}
-      <section id="standorte" className="relative z-10 py-24 md:py-32 overflow-hidden bg-white/55 backdrop-blur-lg">
+      <section id="standorte" className="relative z-10 py-24 md:py-32 overflow-hidden bg-white/35">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll className="text-center max-w-2xl mx-auto mb-14">
             <p className="text-xs font-medium tracking-widest uppercase text-primary mb-3">
@@ -286,7 +286,7 @@ export default function Home() {
       </section>
 
       {/* ═══ SERVICES — Bento grid (varied sizes) ═══ */}
-      <section id="leistungen" className="relative z-10 py-24 md:py-32 overflow-hidden bg-white/55 backdrop-blur-lg">
+      <section id="leistungen" className="relative z-10 py-24 md:py-32 overflow-hidden bg-white/35">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll className="text-center max-w-2xl mx-auto mb-14">
             <p className="text-xs font-medium tracking-widest uppercase text-primary mb-3">
@@ -363,7 +363,7 @@ export default function Home() {
       </section>
 
       {/* ═══ WHY US — 2-column ═══ */}
-      <section className="relative z-10 py-24 md:py-32 overflow-hidden bg-white/55 backdrop-blur-lg">
+      <section className="relative z-10 py-24 md:py-32 overflow-hidden bg-white/35">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <AnimateOnScroll>
@@ -408,7 +408,7 @@ export default function Home() {
       </section>
 
       {/* ═══ REVIEWS ═══ */}
-      <section id="bewertungen" className="relative z-10 py-24 md:py-32 overflow-hidden bg-white/50 backdrop-blur-lg">
+      <section id="bewertungen" className="relative z-10 py-24 md:py-32 overflow-hidden bg-white/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll className="text-center max-w-2xl mx-auto mb-14">
             <p className="text-xs font-medium tracking-widest uppercase text-primary mb-3">
@@ -471,7 +471,7 @@ export default function Home() {
       </section>
 
       {/* ═══ CTA ═══ */}
-      <section className="relative z-10 py-24 md:py-32 overflow-hidden bg-white/55 backdrop-blur-lg">
+      <section className="relative z-10 py-24 md:py-32 overflow-hidden bg-white/35">
         <AnimateOnScroll className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <AnimatedText
             text={t("home.ctaTitle")}
