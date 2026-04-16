@@ -45,7 +45,7 @@ export const en: Translations = {
 
   // Home Page
   "home.seoTitle": "Healthy Feet – Podiatry Practice Munich & Augsburg",
-  "home.seoDescription": "Certified podiatry in Augsburg. Complex treatment, nail correction, diabetic foot care, cryotherapy. Book your appointment now.",
+  "home.seoDescription": "Certified podiatry in Augsburg. Complex treatment, nail correction, diabetic foot care. Book your appointment now.",
   "home.badge": "Insurance Approved · Practice in Munich & Augsburg",
   "home.heroTitle1": "Healthy Feet,",
   "home.heroTitle2": "Better Life",
@@ -87,7 +87,7 @@ export const en: Translations = {
 
   // Services Page
   "services.seoTitle": "Services – Podiatric Treatments",
-  "services.seoDescription": "Our podiatric services: complex treatment, nail correction, diabetic foot care, cryotherapy, plasma therapy and more. Insurance approved.",
+  "services.seoDescription": "Our podiatric services: complex treatment, nail correction, diabetic foot care, plasma therapy and more. Insurance approved.",
   "services.label": "Services",
   "services.title": "Our Treatments",
   "services.description": "As an insurance-approved podiatry practice, we offer a comprehensive range of treatments – from complex treatment to innovative plasma therapy.",
@@ -155,7 +155,7 @@ export const en: Translations = {
   "about.philosophyP2": "Our commitment goes beyond treatment: We provide comprehensive advice, educate, and accompany you on the path to lasting foot health. We value a pleasant atmosphere where you feel well taken care of.",
   "about.approachTitle": "Our Approach",
   "about.approachP1": "Every foot is unique – that's why we begin every treatment with a thorough medical history and individual assessment. Together with you, we develop a treatment plan tailored to your personal needs.",
-  "about.approachP2": "We rely on innovative technologies such as plasma therapy and cryotherapy, combined with proven podiatric methods. This way, we find the optimal solution for every problem.",
+  "about.approachP2": "We rely on innovative technologies such as plasma therapy, combined with proven podiatric methods. This way, we find the optimal solution for every problem.",
   "about.teamTitle": "Our Team",
   "about.teamDescription": "Our dedicated team of certified podiatrists supports you with expertise and empathy.",
   "about.teamMemberName": "Leo Schmidbauer",
@@ -169,7 +169,7 @@ export const en: Translations = {
   "about.teamMember3Bio": "Specialized in nail correction and orthonyxia. Hanna brings an eye for detail and uses state-of-the-art brace therapies to gently resolve even complex nail problems.",
   "about.teamMember4Name": "Anatolij Boxler",
   "about.teamMember4Role": "Podiatrist",
-  "about.teamMember4Bio": "Experienced in cryotherapy and wound care. Anatolij impresses with his calm, competent manner and his ability to find the optimal treatment strategy even for challenging cases.",
+  "about.teamMember4Bio": "Experienced in wound care and complex foot treatments. Anatolij impresses with his calm, competent manner and his ability to find the optimal treatment strategy even for challenging cases.",
   "about.valuesTitle": "Our Values",
   "about.valueEmpathyTitle": "Empathy",
   "about.valueEmpathyDesc": "We take time for every patient and treat with care and respect.",
@@ -178,7 +178,7 @@ export const en: Translations = {
   "about.valueTrustTitle": "Trust",
   "about.valueTrustDesc": "Transparent advice and honest communication form the foundation of our patient relationships.",
   "about.valueInnovationTitle": "Innovation",
-  "about.valueInnovationDesc": "From plasma therapy to cryotherapy – we rely on modern treatment methods.",
+  "about.valueInnovationDesc": "From plasma therapy to state-of-the-art diagnostics – we rely on modern treatment methods.",
 
   // Blog Page
   "blog.seoTitle": "Patient Information – Knowledge About Foot Health",

@@ -2,7 +2,6 @@ import blog1 from "@/assets/blog-1.avif";
 import blog2 from "@/assets/blog-2.avif";
 import blog3 from "@/assets/blog-3.avif";
 import blog4 from "@/assets/blog-4.avif";
-import blog5 from "@/assets/blog-5.avif";
 import blog6 from "@/assets/blog-6.avif";
 import blog7 from "@/assets/blog-7.avif";
 import blog8 from "@/assets/blog-8.avif";
@@ -55,7 +54,7 @@ Während die kosmetische Fußpflege sich auf Pflege und Ästhetik konzentriert, 
 - **Eingewachsene Nägel** – professionelle Korrektur und Spangentherapie
 - **Diabetisches Fußsyndrom** – spezielle Versorgung bei Nervenschäden
 - **Hornhaut und Hühneraugen** – medizinische Abtragung
-- **Warzen** – Behandlung mittels Kryotherapie
+- **Warzen** – gezielte medizinische Behandlung
 - **Nageldeformitäten** – Orthonyxie und Nagelprothetik
 
 ## Wann zum Podologen?
@@ -91,7 +90,7 @@ While cosmetic foot care focuses on grooming and aesthetics, podiatrists treat m
 - **Ingrown toenails** – professional correction and brace therapy
 - **Diabetic foot syndrome** – specialized care for nerve damage
 - **Calluses and corns** – medical removal
-- **Warts** – treatment using cryotherapy
+- **Warts** – targeted medical treatment
 - **Nail deformities** – orthonyxia and nail prosthetics
 
 ## When Should You See a Podiatrist?
@@ -127,7 +126,7 @@ If medically necessary, statutory health insurance covers the costs of podologic
 - **Вросшие ногти** – профессиональная коррекция и скобяная терапия
 - **Диабетическая стопа** – специализированный уход при повреждении нервов
 - **Мозоли и натоптыши** – медицинское удаление
-- **Бородавки** – лечение методом криотерапии
+- **Бородавки** – целенаправленное медицинское лечение
 - **Деформация ногтей** – ортониксия и протезирование ногтей
 
 ## Когда следует обратиться к подологу?
@@ -606,160 +605,6 @@ Nail correction and orthonyxia can be prescribed as an insurance-covered service
     },
   },
   {
-    slug: "warzen-kryotherapie",
-    date: "2026-03-01",
-    image: blog5,
-    translations: {
-      de: {
-        title: "Warzen am Fuß – So hilft Kryotherapie",
-        metaDescription:
-          "Dornwarzen am Fuß sind hartnäckig und schmerzhaft. Erfahren Sie, wie Kryotherapie (Vereisung) effektiv hilft.",
-        category: "Behandlungen",
-        readTime: "4 Min.",
-        excerpt:
-          "Dornwarzen (Verrucae plantares) können jeden Schritt zur Qual machen. Die Kryotherapie bietet eine effektive, schnelle Behandlung.",
-        content: `## Was sind Dornwarzen?
-
-Dornwarzen (Verrucae plantares) werden durch humane Papillomviren (HPV) verursacht. Sie wachsen durch den Druck beim Gehen nach innen und verursachen stechende Schmerzen.
-
-## Warum sind Fußwarzen so hartnäckig?
-
-- Die Hornschicht am Fuß ist dick – Wirkstoffe dringen schlecht ein
-- Das feucht-warme Milieu im Schuh begünstigt das Virus
-- Dornwarzen wachsen tief ins Gewebe hinein
-- Selbstbehandlung erreicht oft nicht die Wurzel
-
-## So funktioniert Kryotherapie
-
-Bei der Kryotherapie wird flüssiger Stickstoff (-196°C) gezielt auf die Warze aufgebracht:
-
-1. **Reinigung** des betroffenen Bereichs
-2. **Kontrollierte Vereisung** für wenige Sekunden
-3. Das Gewebe **bildet eine Blase** und stößt die Warze ab
-4. Gesundes Gewebe wächst nach
-
-### Vorteile der Kryotherapie
-
-- Schnelle Behandlung (wenige Minuten)
-- Kein Schneiden nötig
-- Geringe Narbenbildung
-- Hohe Erfolgsquote
-
-### Was Sie danach beachten sollten
-
-- Die Blase nicht aufstechen
-- Füße sauber und trocken halten
-- In öffentlichen Bereichen Badeschuhe tragen
-- Folgetermin wahrnehmen (oft 2-3 Sitzungen nötig)
-
-## Prävention
-
-- In Schwimmbädern und Duschen immer Badeschuhe tragen
-- Füße täglich waschen und gut trocknen
-- Immunsystem stärken
-- Bei Veränderungen frühzeitig zum Podologen`,
-      },
-      en: {
-        title: "Warts on the Foot – How Cryotherapy Helps",
-        metaDescription:
-          "Plantar warts on the foot are stubborn and painful. Learn how cryotherapy (freezing) effectively helps.",
-        category: "Treatments",
-        readTime: "4 min.",
-        excerpt:
-          "Plantar warts (verrucae plantares) can make every step agonizing. Cryotherapy offers an effective, fast treatment.",
-        content: `## What Are Plantar Warts?
-
-Plantar warts (verrucae plantares) are caused by human papillomaviruses (HPV). Due to the pressure from walking, they grow inward and cause stabbing pain.
-
-## Why Are Foot Warts So Stubborn?
-
-- The horny layer on the foot is thick – active ingredients penetrate poorly
-- The moist, warm environment inside shoes favors the virus
-- Plantar warts grow deep into the tissue
-- Self-treatment often fails to reach the root
-
-## How Cryotherapy Works
-
-During cryotherapy, liquid nitrogen (-196°C) is applied precisely to the wart:
-
-1. **Cleaning** of the affected area
-2. **Controlled freezing** for a few seconds
-3. The tissue **forms a blister** and sheds the wart
-4. Healthy tissue grows back
-
-### Advantages of Cryotherapy
-
-- Quick treatment (a few minutes)
-- No cutting required
-- Minimal scarring
-- High success rate
-
-### What to Keep in Mind Afterwards
-
-- Do not puncture the blister
-- Keep feet clean and dry
-- Wear shower shoes in public areas
-- Attend the follow-up appointment (often 2–3 sessions needed)
-
-## Prevention
-
-- Always wear shower shoes in swimming pools and showers
-- Wash feet daily and dry them thoroughly
-- Strengthen your immune system
-- See a podiatrist early when you notice changes`,
-      },
-      ru: {
-        title: "Бородавки на стопе – как помогает криотерапия",
-        metaDescription:
-          "Подошвенные бородавки упорны и болезненны. Узнайте, как криотерапия (замораживание) эффективно помогает.",
-        category: "Процедуры",
-        readTime: "4 мин.",
-        excerpt:
-          "Подошвенные бородавки (Verrucae plantares) могут превращать каждый шаг в мучение. Криотерапия предлагает эффективное и быстрое лечение.",
-        content: `## Что такое подошвенные бородавки?
-
-Подошвенные бородавки (Verrucae plantares) вызываются вирусом папилломы человека (ВПЧ). Из-за давления при ходьбе они растут внутрь и вызывают колющую боль.
-
-## Почему бородавки на стопе так трудно вывести?
-
-- Роговой слой на стопе толстый – активные вещества плохо проникают
-- Влажная тёплая среда в обуви способствует развитию вируса
-- Подошвенные бородавки растут глубоко в ткань
-- Самолечение часто не достигает корня
-
-## Как работает криотерапия
-
-При криотерапии жидкий азот (-196°C) целенаправленно наносится на бородавку:
-
-1. **Очищение** поражённого участка
-2. **Контролируемое замораживание** на несколько секунд
-3. Ткань **образует пузырь** и отторгает бородавку
-4. Здоровая ткань нарастает заново
-
-### Преимущества криотерапии
-
-- Быстрая процедура (несколько минут)
-- Не требуется разрезов
-- Минимальное рубцевание
-- Высокий процент успеха
-
-### Что следует учесть после процедуры
-
-- Не прокалывайте пузырь
-- Держите ноги чистыми и сухими
-- Носите тапочки в общественных местах
-- Посетите контрольный приём (часто требуется 2–3 сеанса)
-
-## Профилактика
-
-- Всегда носите тапочки в бассейнах и душевых
-- Мойте ноги ежедневно и тщательно вытирайте
-- Укрепляйте иммунную систему
-- При изменениях своевременно обращайтесь к подологу`,
-      },
-    },
-  },
-  {
     slug: "fusspflege-im-winter",
     date: "2025-12-05",
     image: blog6,
@@ -937,7 +782,7 @@ Gesetzlich Versicherte ab 18 Jahren zahlen eine Zuzahlung von 10% der Behandlung
 
 ## Privatleistungen
 
-Behandlungen ohne Verordnung (z.B. Plasmatherapie, kosmetische Fußpflege, Kryotherapie) sind Privatleistungen. Wir beraten Sie gerne zu den Kosten.`,
+Behandlungen ohne Verordnung (z.B. Plasmatherapie, kosmetische Fußpflege) sind Privatleistungen. Wir beraten Sie gerne zu den Kosten.`,
       },
       en: {
         title: "Podology & Health Insurance – When Does Insurance Cover It?",
@@ -988,7 +833,7 @@ Statutory-insured patients aged 18 and older pay a co-payment of 10% of the trea
 
 ## Private Services
 
-Treatments without a prescription (e.g., plasma therapy, cosmetic foot care, cryotherapy) are private services. We are happy to advise you on the costs.`,
+Treatments without a prescription (e.g., plasma therapy, cosmetic foot care) are private services. We are happy to advise you on the costs.`,
       },
       ru: {
         title: "Подология и медицинская страховка – когда покрывает страховка?",
@@ -1039,7 +884,7 @@ Treatments without a prescription (e.g., plasma therapy, cosmetic foot care, cry
 
 ## Частные услуги
 
-Процедуры без направления (например, плазменная терапия, косметический уход за стопами, криотерапия) являются частными услугами. Мы с удовольствием проконсультируем вас по стоимости.`,
+Процедуры без направления (например, плазменная терапия, косметический уход за стопами) являются частными услугами. Мы с удовольствием проконсультируем вас по стоимости.`,
       },
     },
   },

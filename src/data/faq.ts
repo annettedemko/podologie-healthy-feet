@@ -105,15 +105,15 @@ export const faqs: FAQItem[] = [
     translations: {
       de: {
         question: "Sind die Behandlungen schmerzhaft?",
-        answer: "Unsere Behandlungen sind in der Regel schmerzfrei. Nagelkorrekturen mit modernen Spangensystemen sind deutlich schonender als operative Eingriffe. Bei der Kryotherapie kann ein kurzes Kältegefühl auftreten.",
+        answer: "Unsere Behandlungen sind in der Regel schmerzfrei. Nagelkorrekturen mit modernen Spangensystemen sind deutlich schonender als operative Eingriffe. Wir arbeiten stets besonders vorsichtig und einfühlsam.",
       },
       en: {
         question: "Are the treatments painful?",
-        answer: "Our treatments are generally painless. Nail corrections with modern brace systems are much gentler than surgical procedures. With cryotherapy, a brief cold sensation may occur.",
+        answer: "Our treatments are generally painless. Nail corrections with modern brace systems are much gentler than surgical procedures. We always work with particular care and empathy.",
       },
       ru: {
         question: "Болезненны ли процедуры?",
-        answer: "Наши процедуры, как правило, безболезненны. Коррекция ногтей с помощью современных скобочных систем значительно щадящее, чем хирургические вмешательства. При криотерапии может возникнуть кратковременное ощущение холода.",
+        answer: "Наши процедуры, как правило, безболезненны. Коррекция ногтей с помощью современных скобочных систем значительно щадящее, чем хирургические вмешательства. Мы всегда работаем особенно бережно и с пониманием.",
       },
     },
   },

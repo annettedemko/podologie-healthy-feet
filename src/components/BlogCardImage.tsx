@@ -19,8 +19,6 @@ const gradients: Record<string, string> = {
     "linear-gradient(120deg, #ecfdf5 0%, #d1fae5 30%, #bfdbfe 70%, #93c5fd 100%)",
   "eingewachsener-nagel-was-tun":
     "linear-gradient(160deg, #f0f9ff 0%, #e0f2fe 40%, #bae6fd 75%, #7dd3fc 100%)",
-  "warzen-kryotherapie":
-    "linear-gradient(140deg, #f0fdf4 0%, #dcfce7 30%, #d1fae5 60%, #bfdbfe 100%)",
   "fusspflege-im-winter":
     "linear-gradient(130deg, #eff6ff 0%, #dbeafe 45%, #c7d2fe 80%, #a5b4fc 100%)",
   "krankenkasse-podologie":

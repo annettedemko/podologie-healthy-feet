@@ -18,7 +18,7 @@ function getOrganizationData(lang: string) {
     "@type": "MedicalBusiness",
     name: "Healthy Feet – Podologische Praxis",
     description:
-      "Kassenzugelassene Podologie in München und Augsburg. Komplexbehandlung, Nagelkorrektur, Diabetische Fußpflege, Kryotherapie und mehr.",
+      "Kassenzugelassene Podologie in München und Augsburg. Komplexbehandlung, Nagelkorrektur, Diabetische Fußpflege und mehr.",
     url: "https://podologie-healthyfeet.de",
     telephone: "+498213490642",
     email: "muenchen@podologie-healthyfeet.de",

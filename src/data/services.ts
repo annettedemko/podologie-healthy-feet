@@ -97,17 +97,17 @@ export const services: Service[] = [
       de: {
         title: "Warzenbehandlung",
         shortDesc: "Professionelle Entfernung von Dornwarzen und Fu\u00dfwarzen \u2013 gezielt und wirkungsvoll.",
-        longDesc: "Fu\u00dfwarzen (Verrucae plantares) sind virusbedingte Hautver\u00e4nderungen, die Schmerzen beim Gehen verursachen k\u00f6nnen. Wir bieten verschiedene Behandlungsmethoden an \u2013 von der Vereisung (Kryotherapie) bis zur chirurgischen Abtragung. Die Behandlung wird individuell auf den Befund abgestimmt.",
+        longDesc: "Fu\u00dfwarzen (Verrucae plantares) sind virusbedingte Hautver\u00e4nderungen, die Schmerzen beim Gehen verursachen k\u00f6nnen. Wir bieten verschiedene Behandlungsmethoden an \u2013 individuell auf den Befund abgestimmt, schonend und wirkungsvoll.",
       },
       en: {
         title: "Wart Treatment",
         shortDesc: "Professional removal of plantar warts and foot warts \u2013 targeted and effective.",
-        longDesc: "Foot warts (verrucae plantares) are virus-caused skin changes that can cause pain when walking. We offer various treatment methods \u2013 from freezing (cryotherapy) to surgical removal. Treatment is individually tailored to the findings.",
+        longDesc: "Foot warts (verrucae plantares) are virus-caused skin changes that can cause pain when walking. We offer various treatment methods \u2013 individually tailored to the findings, gentle and effective.",
       },
       ru: {
         title: "\u041b\u0435\u0447\u0435\u043d\u0438\u0435 \u0431\u043e\u0440\u043e\u0434\u0430\u0432\u043e\u043a",
         shortDesc: "\u041f\u0440\u043e\u0444\u0435\u0441\u0441\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u043e\u0435 \u0443\u0434\u0430\u043b\u0435\u043d\u0438\u0435 \u043f\u043e\u0434\u043e\u0448\u0432\u0435\u043d\u043d\u044b\u0445 \u0431\u043e\u0440\u043e\u0434\u0430\u0432\u043e\u043a \u2013 \u0446\u0435\u043b\u0435\u043d\u0430\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u043d\u043e \u0438 \u044d\u0444\u0444\u0435\u043a\u0442\u0438\u0432\u043d\u043e.",
-        longDesc: "\u041f\u043e\u0434\u043e\u0448\u0432\u0435\u043d\u043d\u044b\u0435 \u0431\u043e\u0440\u043e\u0434\u0430\u0432\u043a\u0438 \u2013 \u044d\u0442\u043e \u0432\u0438\u0440\u0443\u0441\u043d\u044b\u0435 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f \u043a\u043e\u0436\u0438, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u043c\u043e\u0433\u0443\u0442 \u0432\u044b\u0437\u044b\u0432\u0430\u0442\u044c \u0431\u043e\u043b\u044c \u043f\u0440\u0438 \u0445\u043e\u0434\u044c\u0431\u0435. \u041c\u044b \u043f\u0440\u0435\u0434\u043b\u0430\u0433\u0430\u0435\u043c \u0440\u0430\u0437\u043b\u0438\u0447\u043d\u044b\u0435 \u043c\u0435\u0442\u043e\u0434\u044b \u043b\u0435\u0447\u0435\u043d\u0438\u044f \u2013 \u043e\u0442 \u0437\u0430\u043c\u043e\u0440\u043e\u0437\u043a\u0438 (\u043a\u0440\u0438\u043e\u0442\u0435\u0440\u0430\u043f\u0438\u044f) \u0434\u043e \u0445\u0438\u0440\u0443\u0440\u0433\u0438\u0447\u0435\u0441\u043a\u043e\u0433\u043e \u0443\u0434\u0430\u043b\u0435\u043d\u0438\u044f. \u041b\u0435\u0447\u0435\u043d\u0438\u0435 \u043f\u043e\u0434\u0431\u0438\u0440\u0430\u0435\u0442\u0441\u044f \u0438\u043d\u0434\u0438\u0432\u0438\u0434\u0443\u0430\u043b\u044c\u043d\u043e.",
+        longDesc: "Подошвенные бородавки – это вирусные изменения кожи, которые могут вызывать боль при ходьбе. Мы предлагаем различные методы лечения – индивидуально подобранные, щадящие и эффективные.",
       },
     },
   },

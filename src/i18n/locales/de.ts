@@ -45,7 +45,7 @@ export const de: Translations = {
 
   // Home Page
   "home.seoTitle": "Healthy Feet – Podologische Praxis München & Augsburg",
-  "home.seoDescription": "Kassenzugelassene Podologie in Augsburg. Komplexbehandlung, Nagelkorrektur, Diabetische Fußpflege, Kryotherapie. Jetzt Termin buchen.",
+  "home.seoDescription": "Kassenzugelassene Podologie in Augsburg. Komplexbehandlung, Nagelkorrektur, Diabetische Fußpflege. Jetzt Termin buchen.",
   "home.badge": "Kassenzugelassen · Praxis in München & Augsburg",
   "home.heroTitle1": "Gesunde Füße,",
   "home.heroTitle2": "besseres Leben",
@@ -87,7 +87,7 @@ export const de: Translations = {
 
   // Services Page
   "services.seoTitle": "Leistungen – Podologische Behandlungen",
-  "services.seoDescription": "Unsere podologischen Leistungen: Komplexbehandlung, Nagelkorrektur, Diabetische Fußpflege, Kryotherapie, Plasmatherapie und mehr. Kassenzugelassen.",
+  "services.seoDescription": "Unsere podologischen Leistungen: Komplexbehandlung, Nagelkorrektur, Diabetische Fußpflege, Plasmatherapie und mehr. Kassenzugelassen.",
   "services.label": "Leistungen",
   "services.title": "Unsere Behandlungen",
   "services.description": "Als kassenzugelassene Podologie-Praxis bieten wir Ihnen ein umfassendes Spektrum an Behandlungen – von der Komplexbehandlung bis zur innovativen Plasmatherapie.",
@@ -155,7 +155,7 @@ export const de: Translations = {
   "about.philosophyP2": "Unser Anspruch geht über die reine Behandlung hinaus: Wir beraten Sie umfassend, klären auf und begleiten Sie auf dem Weg zu dauerhafter Fußgesundheit. Dabei legen wir Wert auf eine angenehme Atmosphäre, in der Sie sich gut aufgehoben fühlen.",
   "about.approachTitle": "Unser Ansatz",
   "about.approachP1": "Jeder Fuß ist einzigartig – deshalb beginnen wir jede Behandlung mit einer gründlichen Anamnese und individuellen Befunderhebung. Gemeinsam mit Ihnen entwickeln wir einen Behandlungsplan, der auf Ihre persönlichen Bedürfnisse abgestimmt ist.",
-  "about.approachP2": "Wir setzen auf innovative Technologien wie Plasmatherapie und Kryotherapie, kombiniert mit bewährten podologischen Methoden. So finden wir für jedes Problem die optimale Lösung.",
+  "about.approachP2": "Wir setzen auf innovative Technologien wie Plasmatherapie, kombiniert mit bewährten podologischen Methoden. So finden wir für jedes Problem die optimale Lösung.",
   "about.teamTitle": "Unser Team",
   "about.teamDescription": "Unser engagiertes Team aus staatlich geprüften Podologen steht Ihnen mit Fachwissen und Einfühlungsvermögen zur Seite.",
   "about.teamMemberName": "Leo Schmidbauer",
@@ -169,7 +169,7 @@ export const de: Translations = {
   "about.teamMember3Bio": "Spezialisiert auf Nagelkorrektur und Orthonyxie. Hanna bringt ein Auge fürs Detail mit und setzt modernste Spangentherapien ein, um selbst komplexe Nagelprobleme schonend zu lösen.",
   "about.teamMember4Name": "Anatolij Boxler",
   "about.teamMember4Role": "Podologe",
-  "about.teamMember4Bio": "Erfahren in Kryotherapie und Wundversorgung. Anatolij überzeugt durch seine ruhige, kompetente Art und seine Fähigkeit, auch bei schwierigen Befunden die optimale Behandlungsstrategie zu finden.",
+  "about.teamMember4Bio": "Erfahren in Wundversorgung und komplexen Fußbehandlungen. Anatolij überzeugt durch seine ruhige, kompetente Art und seine Fähigkeit, auch bei schwierigen Befunden die optimale Behandlungsstrategie zu finden.",
   "about.valuesTitle": "Unsere Werte",
   "about.valueEmpathyTitle": "Einfühlsamkeit",
   "about.valueEmpathyDesc": "Wir nehmen uns Zeit für jeden Patienten und behandeln mit Sorgfalt und Respekt.",
@@ -178,7 +178,7 @@ export const de: Translations = {
   "about.valueTrustTitle": "Vertrauen",
   "about.valueTrustDesc": "Transparente Beratung und ehrliche Kommunikation bilden die Grundlage unserer Patientenbeziehungen.",
   "about.valueInnovationTitle": "Innovation",
-  "about.valueInnovationDesc": "Von der Plasmatherapie bis zur Kryotherapie – wir setzen auf moderne Behandlungsmethoden.",
+  "about.valueInnovationDesc": "Von der Plasmatherapie bis zu modernster Diagnostik – wir setzen auf aktuelle Behandlungsmethoden.",
 
   // Blog Page
   "blog.seoTitle": "Patienteninformation – Wissen rund um Fußgesundheit",

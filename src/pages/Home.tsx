@@ -1,29 +1,23 @@
-import { ArrowRight, Star, MapPin, Clock, Shield, Heart, Stethoscope, Sparkles } from "lucide-react";
+import { ArrowRight, Star, MapPin, Clock, Shield, Heart, Stethoscope, Sparkles, Quote, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import AnimatedText from "@/components/AnimatedText";
-import ParallaxLayer from "@/components/ParallaxLayer";
 import MagneticButton from "@/components/MagneticButton";
 import SEOHead from "@/components/SEOHead";
 import PageTransition from "@/components/PageTransition";
+import TiltCard from "@/components/TiltCard";
+import CountUp from "@/components/CountUp";
+import Marquee from "@/components/Marquee";
 import { services } from "@/data/services";
 import { locations } from "@/data/locations";
 import { reviews } from "@/data/reviews";
 import { motion } from "framer-motion";
 import { useLanguage, LocalizedLink, getLocalizedPath } from "@/i18n";
-import { useEffect, useRef, useCallback } from "react";
+import { useEffect, useRef } from "react";
 
 export default function Home() {
   const { t, lang } = useLanguage();
   const videoRef = useRef<HTMLVideoElement>(null);
-
-  // Track mouse position on premium cards for radial glow
-  const handleCardMouseMove = useCallback((e: React.MouseEvent<HTMLElement>) => {
-    const card = e.currentTarget;
-    const rect = card.getBoundingClientRect();
-    card.style.setProperty("--mouse-x", `${((e.clientX - rect.left) / rect.width) * 100}%`);
-    card.style.setProperty("--mouse-y", `${((e.clientY - rect.top) / rect.height) * 100}%`);
-  }, []);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -35,7 +29,6 @@ export default function Home() {
       video.load();
       const tryPlay = () => {
         video.play().catch(() => {
-          // Retry on user interaction
           const handler = () => {
             video.play().catch(() => {});
             document.removeEventListener("click", handler);
@@ -53,6 +46,21 @@ export default function Home() {
     }
   }, []);
 
+  const allReviews = reviews[lang];
+  const featuredReview = allReviews[0];
+  const gridReviews = allReviews.slice(1, 5);
+
+  // Marquee items — treatment names flow between sections
+  const marqueeItems = [
+    "Podologie",
+    "Nagelkorrektur",
+    "Diabetischer Fuß",
+    "Komplexbehandlung",
+    "Plasmatherapie",
+    "Orthonyxie",
+    "Warzenbehandlung",
+  ];
+
   return (
     <PageTransition>
       <SEOHead
@@ -62,34 +70,49 @@ export default function Home() {
         routeKey="home"
       />
 
-      {/* Hero — full viewport */}
+      {/* ═══ CINEMATIC HERO — full-screen video with blue tint + slow zoom ═══ */}
       <section className="relative h-dvh flex flex-col overflow-hidden -mt-[calc(1.875rem+4rem)] md:-mt-[calc(1.875rem+5rem)]">
-        {/* Background Video */}
-        {/* @ts-expect-error webkit-playsinline is a non-standard attribute */}
-        <video
-          ref={videoRef}
-          autoPlay
-          muted
-          loop
-          playsInline
-          webkit-playsinline=""
-          preload="auto"
-          className="absolute inset-0 w-full h-full object-cover z-0"
-        >
-          <source src="/ripples-hero.mp4" type="video/mp4" />
-        </video>
-
-        {/* Gradient overlays for premium feel */}
-        <div className="absolute inset-0 z-[1] pointer-events-none" aria-hidden="true">
-          {/* Left readability zone — blue tint */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#dbeafe]/60 via-[#dbeafe]/25 to-transparent" />
-          {/* Overall blue tint */}
-          <div className="absolute inset-0 bg-[#3b82f6]/[0.08]" />
-          {/* Bottom fade to white — long soft gradient */}
-          <div className="absolute bottom-0 left-0 right-0 h-[55%] bg-gradient-to-t from-white via-white/50 via-30% to-transparent" />
+        {/* Video with slow zoom — cinematic */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          {/* @ts-expect-error webkit-playsinline is a non-standard attribute */}
+          <video
+            ref={videoRef}
+            autoPlay
+            muted
+            loop
+            playsInline
+            webkit-playsinline=""
+            preload="auto"
+            className="absolute inset-0 w-full h-full object-cover animate-slow-zoom"
+            style={{
+              filter: "saturate(1.4) hue-rotate(-8deg) contrast(1.05)",
+            }}
+          >
+            <source src="/ripples-hero.mp4" type="video/mp4" />
+          </video>
         </div>
 
-        {/* Main hero content — left-aligned, vertically centered on mobile, top on desktop */}
+        {/* Blue/cyan gradient overlay — saturates the video into brand colors */}
+        <div className="absolute inset-0 z-[1] pointer-events-none" aria-hidden="true">
+          {/* Blue tint — primary color wash */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(135deg, rgba(30,138,225,0.35) 0%, rgba(56,178,222,0.25) 50%, rgba(30,95,180,0.4) 100%)",
+              mixBlendMode: "multiply",
+            }}
+          />
+          {/* Readability layer for text */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#dbeafe]/50 via-[#dbeafe]/15 to-transparent" />
+          {/* Bottom fade to white for trust bar */}
+          <div className="absolute bottom-0 left-0 right-0 h-[45%] bg-gradient-to-t from-white via-white/60 to-transparent" />
+        </div>
+
+        {/* Film grain — premium texture */}
+        <div className="film-grain z-[2]" aria-hidden="true" />
+
+        {/* Main content */}
         <div className="flex-1 flex items-center md:items-start pt-[calc(1.875rem+3rem)] md:pt-[calc(1.875rem+6rem)] pb-20 md:pb-0">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
             <div className="max-w-2xl">
@@ -97,7 +120,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 backdrop-blur-sm border border-primary/10 text-primary text-xs sm:text-sm font-medium mb-3 sm:mb-4"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-md border border-primary/10 text-primary text-xs sm:text-sm font-medium mb-3 sm:mb-4 shadow-sm"
               >
                 <Shield className="w-4 h-4" />
                 {t("home.badge")}
@@ -134,7 +157,7 @@ export default function Home() {
               >
                 <MagneticButton strength={8}>
                   <LocalizedLink to="booking">
-                    <Button size="lg" className="w-[240px] sm:w-auto rounded-full px-10 text-base gap-2 h-12 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all duration-500">
+                    <Button size="lg" className="w-[240px] sm:w-auto rounded-full px-10 text-base gap-2 h-12 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/40 transition-all duration-500">
                       {t("header.bookAppointment")} <ArrowRight className="w-5 h-5" />
                     </Button>
                   </LocalizedLink>
@@ -151,9 +174,23 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Scroll indicator */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1.5 }}
+          className="absolute bottom-24 left-1/2 -translate-x-1/2 z-10 hidden md:flex flex-col items-center gap-2 text-primary/60"
+        >
+          <motion.div
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <ChevronDown className="w-5 h-5" />
+          </motion.div>
+        </motion.div>
       </section>
 
-      {/* Trust Bar — overlaps hero bottom */}
+      {/* ═══ TRUST BAR ═══ */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -167,14 +204,38 @@ export default function Home() {
         </div>
       </motion.div>
 
-      {/* Locations */}
+      {/* ═══ STATS with count-up ═══ */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {([
+              { end: 5, suffix: "+", label: t("home.statsExperience") },
+              { end: 1000, suffix: "+", label: t("home.statsPatients") },
+              { end: 2, suffix: "", label: t("home.trustLocations") },
+              { end: 4, suffix: "", label: t("home.statsTeam") },
+            ]).map((stat, i) => (
+              <AnimateOnScroll key={i} delay={i * 0.1}>
+                <div>
+                  <CountUp
+                    end={stat.end}
+                    suffix={stat.suffix}
+                    className="text-5xl md:text-6xl font-serif font-bold bg-gradient-to-br from-primary to-clinic-teal bg-clip-text text-transparent block mb-2"
+                  />
+                  <p className="text-sm text-muted-foreground font-medium">{stat.label}</p>
+                </div>
+              </AnimateOnScroll>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ MARQUEE — treatment names flowing ═══ */}
+      <div className="border-y border-primary/10 bg-white">
+        <Marquee items={marqueeItems} duration={45} />
+      </div>
+
+      {/* ═══ LOCATIONS ═══ */}
       <section id="standorte" className="py-24 md:py-32 relative overflow-hidden bg-white">
-        <ParallaxLayer speed={0.35} className="absolute -bottom-16 -left-24 pointer-events-none">
-          <div className="w-48 h-48 rounded-full bg-primary/[0.04] blur-2xl" aria-hidden="true" />
-        </ParallaxLayer>
-        <ParallaxLayer speed={-0.2} className="absolute top-1/3 -right-16 pointer-events-none">
-          <div className="w-32 h-32 rounded-full bg-clinic-teal/[0.04] blur-2xl" aria-hidden="true" />
-        </ParallaxLayer>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll className="text-center max-w-2xl mx-auto mb-14">
             <p className="text-xs font-medium tracking-widest uppercase text-primary mb-3">
@@ -183,7 +244,7 @@ export default function Home() {
             <AnimatedText
               text={t("home.locationsTitle")}
               as="h2"
-              className="text-5xl md:text-6xl font-serif font-bold text-foreground mb-4"
+              className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4"
             />
           </AnimateOnScroll>
 
@@ -192,35 +253,34 @@ export default function Home() {
               const routeKey = loc.id === "augsburg" ? "locationAugsburg" as const : "locationMuenchen" as const;
               return (
                 <AnimateOnScroll key={loc.id} delay={i * 0.1}>
-                  <LocalizedLink to={routeKey} className="block">
-                    <div className="premium-card overflow-hidden" onMouseMove={handleCardMouseMove}>
-                      <div className="w-full h-56 md:h-64 overflow-hidden">
+                  <LocalizedLink to={routeKey} className="block group" style={{ perspective: "1000px" }}>
+                    <TiltCard className="rounded-2xl overflow-hidden border border-border/50 shadow-lg hover:shadow-2xl transition-shadow duration-500 bg-white">
+                      <div className="w-full h-56 md:h-64 overflow-hidden relative">
                         <img
                           src={`/${loc.id === "muenchen" ? "muenchen" : "augsburg"}.jpg`}
                           alt={loc.city}
-                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                         />
+                        <div className="absolute bottom-0 inset-x-0 h-20 bg-gradient-to-t from-black/40 to-transparent" />
+                        <h3 className="absolute bottom-4 left-6 text-2xl font-serif font-bold text-white">{loc.city}</h3>
                       </div>
-                      <div className="p-8">
-                        <h3 className="text-2xl font-serif font-bold text-foreground mb-1">{loc.city}</h3>
-                        <p className="text-sm text-muted-foreground mb-4">{loc.address}, {loc.zip}</p>
+                      <div className="p-6">
+                        <p className="text-sm text-muted-foreground mb-3">{loc.address}, {loc.zip}</p>
                         {loc.hours[lang].map((h) => (
                           <div key={h.days} className="flex items-center gap-2 text-sm text-muted-foreground mb-1">
                             <Clock className="w-3.5 h-3.5" /> {h.days}: {h.time}
                           </div>
                         ))}
                         {loc.phone && (
-                          <p className="text-sm text-primary font-medium mt-3">
-                            {loc.phoneDisplay}
-                          </p>
+                          <p className="text-sm text-primary font-medium mt-3">{loc.phoneDisplay}</p>
                         )}
-                        <div className="mt-5">
-                          <Button variant="outline" className="rounded-full px-6 gap-2 text-sm">
+                        <div className="mt-4">
+                          <span className="inline-flex items-center gap-1.5 text-sm text-primary font-medium group-hover:gap-2.5 transition-all">
                             {t("home.moreInfo")} <ArrowRight className="w-4 h-4" />
-                          </Button>
+                          </span>
                         </div>
                       </div>
-                    </div>
+                    </TiltCard>
                   </LocalizedLink>
                 </AnimateOnScroll>
               );
@@ -229,15 +289,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Problems / Services — what brings people here */}
-      <section id="leistungen" className="py-24 md:py-32 relative overflow-hidden bg-white">
-        {/* Parallax background blobs */}
-        <ParallaxLayer speed={0.4} className="absolute -top-20 -right-32 pointer-events-none">
-          <div className="w-64 h-64 rounded-full bg-primary/[0.04] blur-3xl" aria-hidden="true" />
-        </ParallaxLayer>
-        <ParallaxLayer speed={-0.2} className="absolute bottom-0 -left-20 pointer-events-none">
-          <div className="w-48 h-48 rounded-full bg-clinic-teal/[0.03] blur-3xl" aria-hidden="true" />
-        </ParallaxLayer>
+      {/* ═══ SERVICES — Bento grid (varied sizes) ═══ */}
+      <section id="leistungen" className="py-24 md:py-32 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll className="text-center max-w-2xl mx-auto mb-14">
             <p className="text-xs font-medium tracking-widest uppercase text-primary mb-3">
@@ -246,42 +299,61 @@ export default function Home() {
             <AnimatedText
               text={t("home.problemsTitle")}
               as="h2"
-              className="text-5xl md:text-6xl font-serif font-bold text-foreground mb-4"
+              className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4"
             />
             <p className="text-muted-foreground leading-relaxed">
               {t("home.problemsDescription")}
             </p>
           </AnimateOnScroll>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.slice(0, 6).map((service, i) => (
-              <AnimateOnScroll key={service.id} delay={i * 0.08}>
-                <LocalizedLink
-                  to="services"
-                  hash={service.id}
-                  className="premium-card block h-full overflow-hidden"
-                  onMouseMove={handleCardMouseMove}
+          {/* Bento grid: first card spans 2 columns on lg */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 auto-rows-[minmax(260px,auto)]">
+            {services.slice(0, 6).map((service, i) => {
+              // First card: 2x wide (lg:col-span-2), larger
+              const isFeatured = i === 0;
+              return (
+                <AnimateOnScroll
+                  key={service.id}
+                  delay={i * 0.08}
+                  className={isFeatured ? "lg:col-span-2 lg:row-span-2" : ""}
                 >
-                  <div className="w-full h-48 overflow-hidden">
-                    <img src={service.image} alt={service.translations[lang].title} className="w-full h-full object-cover" />
-                  </div>
-                  <div className="p-6">
-                  <h3 className="text-lg font-semibold text-foreground mb-2">{service.translations[lang].title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{service.translations[lang].shortDesc}</p>
-                  <div className="flex flex-wrap gap-2 mt-3">
-                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-blue-50 text-blue-600 text-xs font-medium">
-                      {t("services.privatBadge")}
-                    </span>
-                    {service.mitVerordnung && (
-                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-green-50 text-green-600 text-xs font-medium">
-                        {t("services.verordnungBadge")}
-                      </span>
-                    )}
-                  </div>
-                  </div>
-                </LocalizedLink>
-              </AnimateOnScroll>
-            ))}
+                  <LocalizedLink
+                    to="services"
+                    hash={service.id}
+                    className="block h-full"
+                    style={{ perspective: "1000px" }}
+                  >
+                    <TiltCard className="group rounded-2xl overflow-hidden bg-white border border-border/50 shadow-md hover:shadow-2xl transition-shadow duration-500 h-full flex flex-col">
+                      <div className={`w-full overflow-hidden ${isFeatured ? "h-64 lg:h-80" : "h-40"}`}>
+                        <img
+                          src={service.image}
+                          alt={service.translations[lang].title}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        />
+                      </div>
+                      <div className={`flex-1 ${isFeatured ? "p-7" : "p-5"}`}>
+                        <h3 className={`font-semibold text-foreground mb-2 group-hover:text-primary transition-colors ${isFeatured ? "text-2xl font-serif" : "text-lg"}`}>
+                          {service.translations[lang].title}
+                        </h3>
+                        <p className={`text-muted-foreground leading-relaxed ${isFeatured ? "text-base" : "text-sm"}`}>
+                          {service.translations[lang].shortDesc}
+                        </p>
+                        <div className="flex flex-wrap gap-2 mt-3">
+                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-blue-50 text-blue-600 text-xs font-medium">
+                            {t("services.privatBadge")}
+                          </span>
+                          {service.mitVerordnung && (
+                            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-green-50 text-green-600 text-xs font-medium">
+                              {t("services.verordnungBadge")}
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                    </TiltCard>
+                  </LocalizedLink>
+                </AnimateOnScroll>
+              );
+            })}
           </div>
 
           <div className="text-center mt-12">
@@ -294,56 +366,53 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Healthy Feet — trust block */}
+      {/* ═══ WHY US — 2-column ═══ */}
       <section className="py-24 md:py-32 relative overflow-hidden bg-white">
-        <ParallaxLayer speed={0.3} className="absolute -top-10 left-1/4 pointer-events-none">
-          <div className="w-48 h-48 rounded-full bg-primary/[0.04] blur-3xl" aria-hidden="true" />
-        </ParallaxLayer>
-        <ParallaxLayer speed={-0.25} className="absolute bottom-10 right-1/4 pointer-events-none">
-          <div className="w-36 h-36 rounded-full bg-clinic-teal/[0.04] blur-3xl" aria-hidden="true" />
-        </ParallaxLayer>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimateOnScroll className="text-center max-w-2xl mx-auto mb-14">
-            <p className="text-xs font-medium tracking-widest uppercase text-primary mb-3">
-              {t("home.whyLabel")}
-            </p>
-            <AnimatedText
-              text={t("home.whyTitle")}
-              as="h2"
-              className="text-5xl md:text-6xl font-serif font-bold text-foreground mb-4"
-            />
-          </AnimateOnScroll>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <AnimateOnScroll>
+              <p className="text-xs font-medium tracking-widest uppercase text-primary mb-3">
+                {t("home.whyLabel")}
+              </p>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6 leading-tight">
+                {t("home.whyTitle")}
+              </h2>
+              <MagneticButton strength={8}>
+                <LocalizedLink to="booking">
+                  <Button size="lg" className="rounded-full px-8 text-base gap-2">
+                    {t("home.ctaButton")} <ArrowRight className="w-5 h-5" />
+                  </Button>
+                </LocalizedLink>
+              </MagneticButton>
+            </AnimateOnScroll>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {([
-              { title: t("home.whyInsurance"), desc: t("home.whyInsuranceDesc"), icon: Shield },
-              { title: t("home.whyMedical"), desc: t("home.whyMedicalDesc"), icon: Stethoscope },
-              { title: t("home.whyModern"), desc: t("home.whyModernDesc"), icon: Sparkles },
-              { title: t("home.whyGentle"), desc: t("home.whyGentleDesc"), icon: Heart },
-              { title: t("home.whyLocations"), desc: t("home.whyLocationsDesc"), icon: MapPin },
-            ] as const).map((item, i) => (
-              <AnimateOnScroll key={i} delay={i * 0.08}>
-                <div className="premium-card p-6 text-center" onMouseMove={handleCardMouseMove}>
-                  <div className="card-icon w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                    <item.icon className="w-6 h-6 text-primary" />
+            <div className="space-y-3">
+              {([
+                { title: t("home.whyInsurance"), desc: t("home.whyInsuranceDesc"), icon: Shield },
+                { title: t("home.whyMedical"), desc: t("home.whyMedicalDesc"), icon: Stethoscope },
+                { title: t("home.whyModern"), desc: t("home.whyModernDesc"), icon: Sparkles },
+                { title: t("home.whyGentle"), desc: t("home.whyGentleDesc"), icon: Heart },
+                { title: t("home.whyLocations"), desc: t("home.whyLocationsDesc"), icon: MapPin },
+              ] as const).map((item, i) => (
+                <AnimateOnScroll key={i} delay={i * 0.06}>
+                  <div className="flex gap-4 p-4 rounded-xl hover:bg-primary/5 transition-colors duration-300">
+                    <div className="shrink-0 w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center">
+                      <item.icon className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-0.5">{item.title}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                    </div>
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
-                </div>
-              </AnimateOnScroll>
-            ))}
+                </AnimateOnScroll>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-
-      {/* Reviews — white */}
-      <section id="bewertungen" className="py-24 md:py-32 relative overflow-hidden bg-white">
-        {/* Animated shimmer divider */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] shimmer-line pointer-events-none" aria-hidden="true" />
-        <ParallaxLayer speed={0.2} className="absolute -top-10 right-1/4 pointer-events-none">
-          <div className="w-40 h-40 rounded-full bg-primary/[0.03] blur-3xl" aria-hidden="true" />
-        </ParallaxLayer>
+      {/* ═══ REVIEWS ═══ */}
+      <section id="bewertungen" className="py-24 md:py-32 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #f8fafc 0%, #f0f7ff 100%)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll className="text-center max-w-2xl mx-auto mb-14">
             <p className="text-xs font-medium tracking-widest uppercase text-primary mb-3">
@@ -352,23 +421,52 @@ export default function Home() {
             <AnimatedText
               text={t("home.reviewsTitle")}
               as="h2"
-              className="text-5xl md:text-6xl font-serif font-bold text-foreground mb-4"
+              className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4"
             />
           </AnimateOnScroll>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {reviews[lang].slice(0, 6).map((review, i) => (
-              <AnimateOnScroll key={review.name} delay={i * 0.08}>
-                <div className="premium-card p-6" onMouseMove={handleCardMouseMove}>
-                  <div className="flex gap-0.5 mb-3">
-                    {Array.from({ length: review.rating }).map((_, j) => (
-                      <Star key={j} className="w-4 h-4 fill-primary text-primary" />
+          {featuredReview && (
+            <AnimateOnScroll className="max-w-3xl mx-auto mb-10">
+              <div style={{ perspective: "1200px" }}>
+                <TiltCard maxTilt={4} className="relative rounded-2xl bg-white border border-border/50 shadow-xl p-8 md:p-10">
+                  <Quote className="absolute top-6 right-6 w-12 h-12 text-primary/10" />
+                  <div className="flex gap-0.5 mb-4">
+                    {Array.from({ length: featuredReview.rating }).map((_, j) => (
+                      <Star key={j} className="w-5 h-5 fill-amber-400 text-amber-400" />
                     ))}
                   </div>
-                  <p className="text-sm text-foreground leading-relaxed mb-4">"{review.text}"</p>
-                  <div className="text-xs text-muted-foreground">
-                    <span className="font-medium text-foreground">{review.name}</span> · {review.date}
+                  <p className="text-lg md:text-xl text-foreground leading-relaxed mb-6 font-serif italic">
+                    "{featuredReview.text}"
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-clinic-teal flex items-center justify-center">
+                      <span className="text-sm font-bold text-white">{featuredReview.name.charAt(0)}</span>
+                    </div>
+                    <div>
+                      <p className="font-medium text-foreground">{featuredReview.name}</p>
+                      <p className="text-xs text-muted-foreground">{featuredReview.date}</p>
+                    </div>
                   </div>
+                </TiltCard>
+              </div>
+            </AnimateOnScroll>
+          )}
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {gridReviews.map((review, i) => (
+              <AnimateOnScroll key={review.name} delay={i * 0.08}>
+                <div style={{ perspective: "800px" }}>
+                  <TiltCard maxTilt={5} className="rounded-2xl bg-white border border-border/50 shadow-md p-5 h-full hover:shadow-xl transition-shadow duration-300">
+                    <div className="flex gap-0.5 mb-3">
+                      {Array.from({ length: review.rating }).map((_, j) => (
+                        <Star key={j} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                      ))}
+                    </div>
+                    <p className="text-sm text-foreground leading-relaxed mb-4">"{review.text}"</p>
+                    <p className="text-xs text-muted-foreground">
+                      <span className="font-medium text-foreground">{review.name}</span> · {review.date}
+                    </p>
+                  </TiltCard>
                 </div>
               </AnimateOnScroll>
             ))}
@@ -376,21 +474,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA — blue gradient */}
+      {/* ═══ CTA ═══ */}
       <section className="py-24 md:py-32 relative overflow-hidden" style={{ background: '#F8FAFC' }}>
-        <ParallaxLayer speed={0.4} className="absolute bottom-0 left-1/2 -translate-x-1/2 pointer-events-none">
-          <div className="w-72 h-72 rounded-full bg-[#3b82f6]/[0.06] blur-[80px]" aria-hidden="true" />
-        </ParallaxLayer>
-        <ParallaxLayer speed={-0.3} className="absolute top-10 -left-20 pointer-events-none">
-          <div className="w-40 h-40 rounded-full bg-clinic-teal/[0.04] blur-[60px]" aria-hidden="true" />
-        </ParallaxLayer>
         <AnimateOnScroll className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <AnimatedText
             text={t("home.ctaTitle")}
             as="h2"
             className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4"
           />
-          <p className="text-muted-foreground mb-4">
+          <p className="text-muted-foreground mb-6">
             {t("home.ctaDescription")}
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3">

@@ -48,7 +48,7 @@ export const reviews: Record<Language, Review[]> = {
     {
       name: "Andreas R.",
       rating: 5,
-      text: "Tolle Praxis mit modernem Equipment. Die Kryotherapie bei meiner Dornwarze hat perfekt gewirkt.",
+      text: "Tolle Praxis mit modernem Equipment. Die Behandlung meiner Dornwarze hat perfekt gewirkt.",
       date: "Januar 2026",
       locationId: "augsburg",
     },
@@ -92,7 +92,7 @@ export const reviews: Record<Language, Review[]> = {
     {
       name: "Andreas R.",
       rating: 5,
-      text: "Great practice with modern equipment. The cryotherapy for my plantar wart worked perfectly.",
+      text: "Great practice with modern equipment. The treatment for my plantar wart worked perfectly.",
       date: "January 2026",
       locationId: "augsburg",
     },
@@ -136,7 +136,7 @@ export const reviews: Record<Language, Review[]> = {
     {
       name: "Андреас Р.",
       rating: 5,
-      text: "Отличная практика с современным оборудованием. Криотерапия моей подошвенной бородавки сработала идеально.",
+      text: "Отличная практика с современным оборудованием. Лечение моей подошвенной бородавки сработало идеально.",
       date: "Январь 2026",
       locationId: "augsburg",
     },
