@@ -1,4 +1,4 @@
-import { ArrowRight, Star, MapPin, Clock, Shield, Heart, Stethoscope, Sparkles, Quote, ChevronDown } from "lucide-react";
+import { ArrowRight, Star, MapPin, Clock, Shield, Heart, Stethoscope, Sparkles, Globe, Quote, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import AnimatedText from "@/components/AnimatedText";
@@ -6,7 +6,6 @@ import MagneticButton from "@/components/MagneticButton";
 import SEOHead from "@/components/SEOHead";
 import PageTransition from "@/components/PageTransition";
 import TiltCard from "@/components/TiltCard";
-import CountUp from "@/components/CountUp";
 import Marquee from "@/components/Marquee";
 import { services } from "@/data/services";
 import { locations } from "@/data/locations";
@@ -180,84 +179,22 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* ═══ STATS — 6 credentials, typography-only ═══ */}
-      <section className="py-20 md:py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-y-12 gap-x-8">
-            {/* Kassenzugelassen */}
-            <AnimateOnScroll delay={0}>
-              <div className="text-center md:text-left md:border-l-2 md:border-primary/20 md:pl-6">
-                <p className="text-2xl md:text-3xl font-serif font-bold bg-gradient-to-br from-primary to-clinic-teal bg-clip-text text-transparent mb-2 leading-tight">
-                  Kassenzugelassen
-                </p>
-                <p className="text-xs md:text-sm text-muted-foreground">
-                  Gesetzliche Krankenkassen
-                </p>
-              </div>
-            </AnimateOnScroll>
-
-            {/* Privatpatienten */}
-            <AnimateOnScroll delay={0.08}>
-              <div className="text-center md:text-left md:border-l-2 md:border-primary/20 md:pl-6">
-                <p className="text-2xl md:text-3xl font-serif font-bold bg-gradient-to-br from-primary to-clinic-teal bg-clip-text text-transparent mb-2 leading-tight">
-                  {t("home.statsPrivate")}
-                </p>
-                <p className="text-xs md:text-sm text-muted-foreground">
-                  Individuelle Betreuung
-                </p>
-              </div>
-            </AnimateOnScroll>
-
-            {/* 2 Standorte */}
-            <AnimateOnScroll delay={0.16}>
-              <div className="text-center md:text-left md:border-l-2 md:border-primary/20 md:pl-6">
-                <p className="text-2xl md:text-3xl font-serif font-bold bg-gradient-to-br from-primary to-clinic-teal bg-clip-text text-transparent mb-2 leading-tight">
-                  <CountUp end={2} /> Standorte
-                </p>
-                <p className="text-xs md:text-sm text-muted-foreground">
-                  München & Augsburg
-                </p>
-              </div>
-            </AnimateOnScroll>
-
-            {/* 500+ Patienten */}
-            <AnimateOnScroll delay={0.24}>
-              <div className="text-center md:text-left md:border-l-2 md:border-primary/20 md:pl-6">
-                <p className="text-2xl md:text-3xl font-serif font-bold bg-gradient-to-br from-primary to-clinic-teal bg-clip-text text-transparent mb-2 leading-tight">
-                  <CountUp end={500} suffix="+" /> Patienten
-                </p>
-                <p className="text-xs md:text-sm text-muted-foreground">
-                  {t("home.statsPatients")}
-                </p>
-              </div>
-            </AnimateOnScroll>
-
-            {/* Flexible Termine */}
-            <AnimateOnScroll delay={0.32}>
-              <div className="text-center md:text-left md:border-l-2 md:border-primary/20 md:pl-6">
-                <p className="text-2xl md:text-3xl font-serif font-bold bg-gradient-to-br from-primary to-clinic-teal bg-clip-text text-transparent mb-2 leading-tight">
-                  Flexible Termine
-                </p>
-                <p className="text-xs md:text-sm text-muted-foreground">
-                  Mo – Fr, kurzfristig verfügbar
-                </p>
-              </div>
-            </AnimateOnScroll>
-
-            {/* Sprachen */}
-            <AnimateOnScroll delay={0.4}>
-              <div className="text-center md:text-left md:border-l-2 md:border-primary/20 md:pl-6">
-                <p className="text-2xl md:text-3xl font-serif font-bold bg-gradient-to-br from-primary to-clinic-teal bg-clip-text text-transparent mb-2 leading-tight">
-                  DE · EN · RU · UA
-                </p>
-                <p className="text-xs md:text-sm text-muted-foreground">
-                  4 {t("home.statsLanguages")}
-                </p>
-              </div>
-            </AnimateOnScroll>
-          </div>
+      {/* ═══ TRUST BAR — expanded with 6 credentials ═══ */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.6 }}
+        className="relative z-20 -mt-16 pb-6"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 sm:gap-x-8 md:gap-x-10 text-xs sm:text-sm text-muted-foreground/75">
+          <div className="flex items-center gap-1.5"><Shield className="w-4 h-4 text-primary/55" /> {t("home.trustInsurance")}</div>
+          <div className="flex items-center gap-1.5"><Sparkles className="w-4 h-4 text-primary/55" /> {t("home.statsPrivate")}</div>
+          <div className="flex items-center gap-1.5"><MapPin className="w-4 h-4 text-primary/55" /> {t("home.trustLocations")}</div>
+          <div className="flex items-center gap-1.5"><Heart className="w-4 h-4 text-primary/55" /> 500+ {t("home.statsPatients")}</div>
+          <div className="flex items-center gap-1.5"><Clock className="w-4 h-4 text-primary/55" /> {t("home.trustFlexible")}</div>
+          <div className="flex items-center gap-1.5"><Globe className="w-4 h-4 text-primary/55" /> DE · EN · RU · UA</div>
         </div>
-      </section>
+      </motion.div>
 
       {/* ═══ MARQUEE — treatment names flowing ═══ */}
       <div className="border-y border-primary/10 bg-white">
