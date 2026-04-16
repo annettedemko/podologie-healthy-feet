@@ -197,7 +197,7 @@ export default function Home() {
       </motion.div>
 
       {/* ═══ MARQUEE — treatment names flowing ═══ */}
-      <div className="border-y border-primary/10 bg-white">
+      <div className="mt-16 md:mt-24 border-y border-primary/10 bg-white">
         <Marquee items={marqueeItems} duration={45} />
       </div>
 
