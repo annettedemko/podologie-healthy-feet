@@ -84,6 +84,9 @@ export const de: Translations = {
   "home.ctaTitle": "Vereinbaren Sie Ihren Termin",
   "home.ctaDescription": "Buchen Sie bequem online oder rufen Sie uns direkt an – wir freuen uns auf Sie.",
   "home.ctaButton": "Jetzt Termin buchen",
+  "home.statsPatients": "Zufriedene Patienten",
+  "home.statsPrivate": "Privatpatienten",
+  "home.statsLanguages": "Sprachen",
 
   // Services Page
   "services.seoTitle": "Leistungen – Podologische Behandlungen",

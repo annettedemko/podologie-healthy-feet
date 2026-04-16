@@ -6,6 +6,7 @@ import MagneticButton from "@/components/MagneticButton";
 import SEOHead from "@/components/SEOHead";
 import PageTransition from "@/components/PageTransition";
 import TiltCard from "@/components/TiltCard";
+import CountUp from "@/components/CountUp";
 import Marquee from "@/components/Marquee";
 import { services } from "@/data/services";
 import { locations } from "@/data/locations";
@@ -193,7 +194,89 @@ export default function Home() {
         </div>
       </motion.div>
 
-{/* ═══ MARQUEE — treatment names flowing ═══ */}
+      {/* ═══ STATS — 6 credentials in big-number style ═══ */}
+      <section className="py-16 md:py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-6 text-center">
+            {/* Kassenzugelassen */}
+            <AnimateOnScroll delay={0}>
+              <div>
+                <div className="text-5xl md:text-6xl font-serif font-bold bg-gradient-to-br from-primary to-clinic-teal bg-clip-text text-transparent mb-2 leading-none">
+                  ✓
+                </div>
+                <p className="text-sm md:text-base text-muted-foreground font-medium">
+                  {t("home.trustInsurance")}
+                </p>
+              </div>
+            </AnimateOnScroll>
+
+            {/* Privatpatienten */}
+            <AnimateOnScroll delay={0.08}>
+              <div>
+                <div className="text-5xl md:text-6xl font-serif font-bold bg-gradient-to-br from-primary to-clinic-teal bg-clip-text text-transparent mb-2 leading-none">
+                  ★
+                </div>
+                <p className="text-sm md:text-base text-muted-foreground font-medium">
+                  {t("home.statsPrivate")}
+                </p>
+              </div>
+            </AnimateOnScroll>
+
+            {/* 2 Standorte */}
+            <AnimateOnScroll delay={0.16}>
+              <div>
+                <CountUp
+                  end={2}
+                  className="text-5xl md:text-6xl font-serif font-bold bg-gradient-to-br from-primary to-clinic-teal bg-clip-text text-transparent block mb-2 leading-none"
+                />
+                <p className="text-sm md:text-base text-muted-foreground font-medium">
+                  {t("home.trustLocations")}
+                </p>
+              </div>
+            </AnimateOnScroll>
+
+            {/* 500+ Zufriedene Patienten */}
+            <AnimateOnScroll delay={0.24}>
+              <div>
+                <CountUp
+                  end={500}
+                  suffix="+"
+                  className="text-5xl md:text-6xl font-serif font-bold bg-gradient-to-br from-primary to-clinic-teal bg-clip-text text-transparent block mb-2 leading-none"
+                />
+                <p className="text-sm md:text-base text-muted-foreground font-medium">
+                  {t("home.statsPatients")}
+                </p>
+              </div>
+            </AnimateOnScroll>
+
+            {/* Flexible Termine */}
+            <AnimateOnScroll delay={0.32}>
+              <div>
+                <div className="text-5xl md:text-6xl font-serif font-bold bg-gradient-to-br from-primary to-clinic-teal bg-clip-text text-transparent mb-2 leading-none">
+                  ⏱
+                </div>
+                <p className="text-sm md:text-base text-muted-foreground font-medium">
+                  {t("home.trustFlexible")}
+                </p>
+              </div>
+            </AnimateOnScroll>
+
+            {/* Sprachen */}
+            <AnimateOnScroll delay={0.4}>
+              <div>
+                <div className="text-3xl md:text-4xl font-serif font-bold bg-gradient-to-br from-primary to-clinic-teal bg-clip-text text-transparent mb-2 leading-tight pt-3">
+                  DE · EN · RU · UA
+                </div>
+                <p className="text-sm md:text-base text-muted-foreground font-medium">
+                  {t("home.statsLanguages")}
+                </p>
+              </div>
+            </AnimateOnScroll>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ MARQUEE — treatment names flowing ═══ */}
       <div className="border-y border-primary/10 bg-white">
         <Marquee items={marqueeItems} duration={45} />
       </div>
