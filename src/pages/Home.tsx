@@ -84,11 +84,20 @@ export default function Home() {
             preload="auto"
             className="absolute inset-0 w-full h-full object-cover animate-slow-zoom"
             style={{
-              filter: "saturate(1.35) hue-rotate(-4deg) contrast(1.05)",
+              filter: "saturate(1.7) hue-rotate(-6deg) contrast(1.08)",
             }}
           >
             <source src="/ripples-hero.mp4" type="video/mp4" />
           </video>
+          {/* Extra blue wash — adds more blue without going turquoise */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background: "rgba(59, 130, 246, 0.15)",
+              mixBlendMode: "color",
+            }}
+            aria-hidden="true"
+          />
         </div>
 
         {/* Readability overlays */}
