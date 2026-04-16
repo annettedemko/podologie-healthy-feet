@@ -72,7 +72,7 @@ export default function Home() {
 
       {/* ═══ CINEMATIC HERO — full-screen video with blue tint + slow zoom ═══ */}
       <section className="relative h-dvh flex flex-col overflow-hidden -mt-[calc(1.875rem+4rem)] md:-mt-[calc(1.875rem+5rem)]">
-        {/* Video with slow zoom — cinematic */}
+        {/* Video with slow zoom + strong blue tint via CSS filter */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           {/* @ts-expect-error webkit-playsinline is a non-standard attribute */}
           <video
@@ -85,28 +85,28 @@ export default function Home() {
             preload="auto"
             className="absolute inset-0 w-full h-full object-cover animate-slow-zoom"
             style={{
-              filter: "saturate(1.4) hue-rotate(-8deg) contrast(1.05)",
+              filter: "saturate(1.8) hue-rotate(-18deg) contrast(1.1) brightness(1.05)",
             }}
           >
             <source src="/ripples-hero.mp4" type="video/mp4" />
           </video>
         </div>
 
-        {/* Blue/cyan gradient overlay — saturates the video into brand colors */}
+        {/* Light overlays — video stays clearly visible */}
         <div className="absolute inset-0 z-[1] pointer-events-none" aria-hidden="true">
-          {/* Blue tint — primary color wash */}
+          {/* Subtle blue wash — screen blend keeps colors bright */}
           <div
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(135deg, rgba(30,138,225,0.35) 0%, rgba(56,178,222,0.25) 50%, rgba(30,95,180,0.4) 100%)",
-              mixBlendMode: "multiply",
+                "linear-gradient(135deg, rgba(99,179,237,0.25) 0%, transparent 50%, rgba(30,95,180,0.2) 100%)",
+              mixBlendMode: "screen",
             }}
           />
-          {/* Readability layer for text */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#dbeafe]/50 via-[#dbeafe]/15 to-transparent" />
-          {/* Bottom fade to white for trust bar */}
-          <div className="absolute bottom-0 left-0 right-0 h-[45%] bg-gradient-to-t from-white via-white/60 to-transparent" />
+          {/* Text readability — only in bottom-left where content sits, very subtle */}
+          <div className="absolute inset-y-0 left-0 w-full md:w-2/3 bg-gradient-to-r from-white/40 via-white/10 to-transparent" />
+          {/* Bottom fade to white for trust bar transition */}
+          <div className="absolute bottom-0 left-0 right-0 h-[35%] bg-gradient-to-t from-white via-white/50 to-transparent" />
         </div>
 
         {/* Film grain — premium texture */}
