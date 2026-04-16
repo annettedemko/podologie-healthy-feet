@@ -20,7 +20,7 @@ export const de: Translations = {
   // Footer
   "footer.description": "Kassenzugelassene Podologie in Augsburg. Professionelle Fußgesundheit für alle.",
   "footer.navigation": "Navigation",
-  "footer.contactAugsburg": "Kontakt – Augsburg",
+  "footer.contactAugsburg": "Kontakt Augsburg",
   "footer.munich": "München",
   "footer.munichComingSoon": "Jetzt geöffnet!",
   "footer.contactMunich": "Kontakt München",

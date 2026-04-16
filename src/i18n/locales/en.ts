@@ -20,7 +20,7 @@ export const en: Translations = {
   // Footer
   "footer.description": "Certified podiatry in Augsburg. Professional foot health for everyone.",
   "footer.navigation": "Navigation",
-  "footer.contactAugsburg": "Contact – Augsburg",
+  "footer.contactAugsburg": "Contact Augsburg",
   "footer.munich": "Munich",
   "footer.munichComingSoon": "Now open!",
   "footer.contactMunich": "Contact Munich",

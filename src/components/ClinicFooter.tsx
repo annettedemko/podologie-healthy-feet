@@ -38,9 +38,14 @@ export default function ClinicFooter() {
           <div>
             <h4 className="font-semibold text-sm mb-4">{t("footer.contactMunich")}</h4>
             <div className="flex flex-col gap-3">
-              <div className="flex items-start gap-2 text-sm opacity-60">
+              <a
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${muenchen.address}, ${muenchen.zip}`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-2 text-sm opacity-60 hover:opacity-100 transition-opacity"
+              >
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" /> {muenchen.address}, {muenchen.zip}
-              </div>
+              </a>
               <a href={`tel:${muenchen.phone}`} className="flex items-center gap-2 text-sm opacity-60 hover:opacity-100 transition-opacity">
                 <Phone className="w-4 h-4" /> {muenchen.phoneDisplay}
               </a>
@@ -59,9 +64,14 @@ export default function ClinicFooter() {
           <div>
             <h4 className="font-semibold text-sm mb-4">{t("footer.contactAugsburg")}</h4>
             <div className="flex flex-col gap-3">
-              <div className="flex items-start gap-2 text-sm opacity-60">
+              <a
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${augsburg.address}, ${augsburg.zip}`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-2 text-sm opacity-60 hover:opacity-100 transition-opacity"
+              >
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" /> {augsburg.address}, {augsburg.zip}
-              </div>
+              </a>
               <a href={`tel:${augsburg.phone}`} className="flex items-center gap-2 text-sm opacity-60 hover:opacity-100 transition-opacity">
                 <Phone className="w-4 h-4" /> {augsburg.phoneDisplay}
               </a>

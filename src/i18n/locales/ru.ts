@@ -20,10 +20,10 @@ export const ru: Translations = {
   // Footer
   "footer.description": "Сертифицированная подология в Аугсбурге. Профессиональное здоровье ног для всех.",
   "footer.navigation": "Навигация",
-  "footer.contactAugsburg": "Контакты – Аугсбург",
+  "footer.contactAugsburg": "Контакты Аугсбург",
   "footer.munich": "Мюнхен",
   "footer.munichComingSoon": "Уже открыт!",
-  "footer.contactMunich": "Контакт Мюнхен",
+  "footer.contactMunich": "Контакты Мюнхен",
   "footer.openingHours": "Часы работы",
   "footer.legal": "Правовая информация",
   "footer.imprint": "Импрессум",
