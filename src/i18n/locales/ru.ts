@@ -12,7 +12,7 @@ export const ru: Translations = {
   "nav.services": "Услуги",
   "nav.locations": "Локации",
   "nav.about": "О нас",
-  "nav.blog": "Для пациентов",
+  "nav.blog": "Пациентам",
   "nav.contact": "Контакты",
   "nav.faq": "Вопросы",
   "nav.booking": "Записаться",

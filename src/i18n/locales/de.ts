@@ -12,7 +12,7 @@ export const de: Translations = {
   "nav.services": "Leistungen",
   "nav.locations": "Standorte",
   "nav.about": "Über uns",
-  "nav.blog": "Patienteninformation",
+  "nav.blog": "Patienten-Info",
   "nav.contact": "Kontakt",
   "nav.faq": "FAQ",
   "nav.booking": "Termin buchen",

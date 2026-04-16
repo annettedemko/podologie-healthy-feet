@@ -56,14 +56,14 @@ export default function ClinicHeader() {
             </LocalizedLink>
 
             {/* Desktop Nav */}
-            <nav className="hidden lg:flex items-center gap-1">
+            <nav className="hidden lg:flex items-center gap-0.5">
               {navLinks.map((link) => {
                 const path = `/${lang}/${link.routeKey === "home" ? "" : ""}`;
                 return (
                   <LocalizedLink
                     key={link.labelKey}
                     to={link.routeKey}
-                    className={`px-3 py-2 text-base transition-colors rounded-lg hover:bg-muted/50 ${
+                    className={`px-2.5 py-2 text-sm whitespace-nowrap transition-colors rounded-lg hover:bg-muted/50 ${
                       location.pathname === path
                         ? "text-primary font-medium"
                         : "text-muted-foreground hover:text-foreground"
@@ -75,17 +75,17 @@ export default function ClinicHeader() {
               })}
             </nav>
 
-            <div className="hidden lg:flex items-center gap-3">
+            <div className="hidden lg:flex items-center gap-2">
               <LanguageSwitcher />
               <a
                 href={phoneHref}
-                className="flex items-center gap-1.5 text-base text-muted-foreground hover:text-foreground transition-colors"
+                className="hidden xl:flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap"
               >
                 <Phone className="w-4 h-4" />
                 {phoneDisplay}
               </a>
               <LocalizedLink to="booking">
-                <Button size="sm" className="rounded-full px-5">
+                <Button size="sm" className="rounded-full px-4 whitespace-nowrap">
                   {t("header.bookAppointment")}
                 </Button>
               </LocalizedLink>
