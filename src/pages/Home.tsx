@@ -1,4 +1,4 @@
-import { ArrowRight, Star, MapPin, Clock, Shield, ShieldCheck, Award, Languages, Heart, Stethoscope, Sparkles, Quote, ChevronDown } from "lucide-react";
+import { ArrowRight, Star, MapPin, Clock, Shield, Heart, Stethoscope, Sparkles, Quote, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import AnimatedText from "@/components/AnimatedText";
@@ -180,56 +180,53 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* ═══ STATS — 6 credentials ═══ */}
+      {/* ═══ STATS — 6 credentials, typography-only ═══ */}
       <section className="py-20 md:py-24 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-6 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-y-12 gap-x-8">
             {/* Kassenzugelassen */}
             <AnimateOnScroll delay={0}>
-              <div>
-                <div className="w-20 h-20 mx-auto mb-3 rounded-full bg-gradient-to-br from-primary to-clinic-teal flex items-center justify-center shadow-lg shadow-primary/20">
-                  <ShieldCheck className="w-10 h-10 text-white" strokeWidth={1.8} />
-                </div>
-                <p className="text-sm md:text-base text-foreground font-medium">
-                  {t("home.trustInsurance")}
+              <div className="text-center md:text-left md:border-l-2 md:border-primary/20 md:pl-6">
+                <p className="text-2xl md:text-3xl font-serif font-bold bg-gradient-to-br from-primary to-clinic-teal bg-clip-text text-transparent mb-2 leading-tight">
+                  Kassenzugelassen
+                </p>
+                <p className="text-xs md:text-sm text-muted-foreground">
+                  Gesetzliche Krankenkassen
                 </p>
               </div>
             </AnimateOnScroll>
 
             {/* Privatpatienten */}
             <AnimateOnScroll delay={0.08}>
-              <div>
-                <div className="w-20 h-20 mx-auto mb-3 rounded-full bg-gradient-to-br from-primary to-clinic-teal flex items-center justify-center shadow-lg shadow-primary/20">
-                  <Award className="w-10 h-10 text-white" strokeWidth={1.8} />
-                </div>
-                <p className="text-sm md:text-base text-foreground font-medium">
+              <div className="text-center md:text-left md:border-l-2 md:border-primary/20 md:pl-6">
+                <p className="text-2xl md:text-3xl font-serif font-bold bg-gradient-to-br from-primary to-clinic-teal bg-clip-text text-transparent mb-2 leading-tight">
                   {t("home.statsPrivate")}
+                </p>
+                <p className="text-xs md:text-sm text-muted-foreground">
+                  Individuelle Betreuung
                 </p>
               </div>
             </AnimateOnScroll>
 
             {/* 2 Standorte */}
             <AnimateOnScroll delay={0.16}>
-              <div>
-                <CountUp
-                  end={2}
-                  className="text-5xl md:text-6xl font-serif font-bold bg-gradient-to-br from-primary to-clinic-teal bg-clip-text text-transparent block mb-2 leading-none"
-                />
-                <p className="text-sm md:text-base text-foreground font-medium">
-                  {t("home.trustLocations")}
+              <div className="text-center md:text-left md:border-l-2 md:border-primary/20 md:pl-6">
+                <p className="text-2xl md:text-3xl font-serif font-bold bg-gradient-to-br from-primary to-clinic-teal bg-clip-text text-transparent mb-2 leading-tight">
+                  <CountUp end={2} /> Standorte
+                </p>
+                <p className="text-xs md:text-sm text-muted-foreground">
+                  München & Augsburg
                 </p>
               </div>
             </AnimateOnScroll>
 
-            {/* 500+ Zufriedene Patienten */}
+            {/* 500+ Patienten */}
             <AnimateOnScroll delay={0.24}>
-              <div>
-                <CountUp
-                  end={500}
-                  suffix="+"
-                  className="text-5xl md:text-6xl font-serif font-bold bg-gradient-to-br from-primary to-clinic-teal bg-clip-text text-transparent block mb-2 leading-none"
-                />
-                <p className="text-sm md:text-base text-foreground font-medium">
+              <div className="text-center md:text-left md:border-l-2 md:border-primary/20 md:pl-6">
+                <p className="text-2xl md:text-3xl font-serif font-bold bg-gradient-to-br from-primary to-clinic-teal bg-clip-text text-transparent mb-2 leading-tight">
+                  <CountUp end={500} suffix="+" /> Patienten
+                </p>
+                <p className="text-xs md:text-sm text-muted-foreground">
                   {t("home.statsPatients")}
                 </p>
               </div>
@@ -237,24 +234,24 @@ export default function Home() {
 
             {/* Flexible Termine */}
             <AnimateOnScroll delay={0.32}>
-              <div>
-                <div className="w-20 h-20 mx-auto mb-3 rounded-full bg-gradient-to-br from-primary to-clinic-teal flex items-center justify-center shadow-lg shadow-primary/20">
-                  <Clock className="w-10 h-10 text-white" strokeWidth={1.8} />
-                </div>
-                <p className="text-sm md:text-base text-foreground font-medium">
-                  {t("home.trustFlexible")}
+              <div className="text-center md:text-left md:border-l-2 md:border-primary/20 md:pl-6">
+                <p className="text-2xl md:text-3xl font-serif font-bold bg-gradient-to-br from-primary to-clinic-teal bg-clip-text text-transparent mb-2 leading-tight">
+                  Flexible Termine
+                </p>
+                <p className="text-xs md:text-sm text-muted-foreground">
+                  Mo – Fr, kurzfristig verfügbar
                 </p>
               </div>
             </AnimateOnScroll>
 
             {/* Sprachen */}
             <AnimateOnScroll delay={0.4}>
-              <div>
-                <div className="w-20 h-20 mx-auto mb-3 rounded-full bg-gradient-to-br from-primary to-clinic-teal flex items-center justify-center shadow-lg shadow-primary/20">
-                  <Languages className="w-10 h-10 text-white" strokeWidth={1.8} />
-                </div>
-                <p className="text-sm md:text-base text-foreground font-medium">
+              <div className="text-center md:text-left md:border-l-2 md:border-primary/20 md:pl-6">
+                <p className="text-2xl md:text-3xl font-serif font-bold bg-gradient-to-br from-primary to-clinic-teal bg-clip-text text-transparent mb-2 leading-tight">
                   DE · EN · RU · UA
+                </p>
+                <p className="text-xs md:text-sm text-muted-foreground">
+                  4 {t("home.statsLanguages")}
                 </p>
               </div>
             </AnimateOnScroll>
