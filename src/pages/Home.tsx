@@ -70,43 +70,39 @@ export default function Home() {
         routeKey="home"
       />
 
-      {/* ═══ CINEMATIC HERO — full-screen video with blue tint + slow zoom ═══ */}
-      <section className="relative h-dvh flex flex-col overflow-hidden -mt-[calc(1.875rem+4rem)] md:-mt-[calc(1.875rem+5rem)]">
-        {/* Video with slow zoom + strong blue tint via CSS filter */}
-        <div className="absolute inset-0 z-0 overflow-hidden">
-          {/* @ts-expect-error webkit-playsinline is a non-standard attribute */}
-          <video
-            ref={videoRef}
-            autoPlay
-            muted
-            loop
-            playsInline
-            webkit-playsinline=""
-            preload="auto"
-            className="absolute inset-0 w-full h-full object-cover animate-slow-zoom"
-            style={{
-              filter: "saturate(1.8) hue-rotate(-18deg) contrast(1.1) brightness(1.05)",
-            }}
-          >
-            <source src="/ripples-hero.mp4" type="video/mp4" />
-          </video>
-        </div>
+      {/* ═══ FIXED VIDEO BACKGROUND — visible across entire page ═══ */}
+      <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+        {/* @ts-expect-error webkit-playsinline is a non-standard attribute */}
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          loop
+          playsInline
+          webkit-playsinline=""
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover animate-slow-zoom"
+          style={{
+            filter: "saturate(1.35) hue-rotate(-4deg) contrast(1.05)",
+          }}
+        >
+          <source src="/ripples-hero.mp4" type="video/mp4" />
+        </video>
+        {/* Subtle blue tint — keeps colors balanced */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: "rgba(59, 130, 246, 0.08)",
+          }}
+        />
+      </div>
 
-        {/* Light overlays — video stays clearly visible */}
+      {/* ═══ CINEMATIC HERO — transparent so video shows through ═══ */}
+      <section className="relative h-dvh flex flex-col overflow-hidden -mt-[calc(1.875rem+4rem)] md:-mt-[calc(1.875rem+5rem)]">
+        {/* Hero-specific readability overlays */}
         <div className="absolute inset-0 z-[1] pointer-events-none" aria-hidden="true">
-          {/* Subtle blue wash — screen blend keeps colors bright */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(135deg, rgba(99,179,237,0.25) 0%, transparent 50%, rgba(30,95,180,0.2) 100%)",
-              mixBlendMode: "screen",
-            }}
-          />
-          {/* Text readability — only in bottom-left where content sits, very subtle */}
-          <div className="absolute inset-y-0 left-0 w-full md:w-2/3 bg-gradient-to-r from-white/40 via-white/10 to-transparent" />
-          {/* Bottom fade to white for trust bar transition */}
-          <div className="absolute bottom-0 left-0 right-0 h-[35%] bg-gradient-to-t from-white via-white/50 to-transparent" />
+          {/* Soft left readability zone for text */}
+          <div className="absolute inset-y-0 left-0 w-full md:w-2/3 bg-gradient-to-r from-white/45 via-white/10 to-transparent" />
         </div>
 
         {/* Film grain — premium texture */}
@@ -205,7 +201,7 @@ export default function Home() {
       </motion.div>
 
       {/* ═══ STATS with count-up ═══ */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="relative z-10 py-16 md:py-20 bg-white/75 backdrop-blur-md">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {([
@@ -230,12 +226,12 @@ export default function Home() {
       </section>
 
       {/* ═══ MARQUEE — treatment names flowing ═══ */}
-      <div className="border-y border-primary/10 bg-white">
+      <div className="relative z-10 border-y border-primary/10 bg-white/80 backdrop-blur-md">
         <Marquee items={marqueeItems} duration={45} />
       </div>
 
       {/* ═══ LOCATIONS ═══ */}
-      <section id="standorte" className="py-24 md:py-32 relative overflow-hidden bg-white">
+      <section id="standorte" className="relative z-10 py-24 md:py-32 overflow-hidden bg-white/85 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll className="text-center max-w-2xl mx-auto mb-14">
             <p className="text-xs font-medium tracking-widest uppercase text-primary mb-3">
@@ -290,7 +286,7 @@ export default function Home() {
       </section>
 
       {/* ═══ SERVICES — Bento grid (varied sizes) ═══ */}
-      <section id="leistungen" className="py-24 md:py-32 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%)' }}>
+      <section id="leistungen" className="relative z-10 py-24 md:py-32 overflow-hidden bg-white/90 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll className="text-center max-w-2xl mx-auto mb-14">
             <p className="text-xs font-medium tracking-widest uppercase text-primary mb-3">
@@ -367,7 +363,7 @@ export default function Home() {
       </section>
 
       {/* ═══ WHY US — 2-column ═══ */}
-      <section className="py-24 md:py-32 relative overflow-hidden bg-white">
+      <section className="relative z-10 py-24 md:py-32 overflow-hidden bg-white/90 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <AnimateOnScroll>
@@ -412,7 +408,7 @@ export default function Home() {
       </section>
 
       {/* ═══ REVIEWS ═══ */}
-      <section id="bewertungen" className="py-24 md:py-32 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #f8fafc 0%, #f0f7ff 100%)' }}>
+      <section id="bewertungen" className="relative z-10 py-24 md:py-32 overflow-hidden bg-white/85 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll className="text-center max-w-2xl mx-auto mb-14">
             <p className="text-xs font-medium tracking-widest uppercase text-primary mb-3">
@@ -475,7 +471,7 @@ export default function Home() {
       </section>
 
       {/* ═══ CTA ═══ */}
-      <section className="py-24 md:py-32 relative overflow-hidden" style={{ background: '#F8FAFC' }}>
+      <section className="relative z-10 py-24 md:py-32 overflow-hidden bg-white/90 backdrop-blur-md">
         <AnimateOnScroll className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <AnimatedText
             text={t("home.ctaTitle")}
