@@ -19,9 +19,9 @@ function getOrganizationData(lang: string) {
     name: "Healthy Feet – Podologische Praxis",
     description:
       "Kassenzugelassene Podologie in München und Augsburg. Komplexbehandlung, Nagelkorrektur, Diabetische Fußpflege und mehr.",
-    url: "https://podologie-healthyfeet.de",
+    url: "https://www.healthyfeet-podologie.de",
     telephone: "+498213490642",
-    email: "muenchen@podologie-healthyfeet.de",
+    email: "muenchen@healthyfeet-podologie.de",
     address: [
       {
         "@type": "PostalAddress",

@@ -11,7 +11,7 @@ interface SEOHeadProps {
   routeParams?: Record<string, string>;
 }
 
-const BASE_URL = "https://podologie-healthyfeet.de";
+const BASE_URL = "https://www.healthyfeet-podologie.de";
 
 export default function SEOHead({
   title,

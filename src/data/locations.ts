@@ -13,7 +13,8 @@ export interface Location {
   status: "active" | "coming-soon";
   coordinates: { lat: number; lng: number };
   googleMapsUrl: string;
-  doctolibUrl?: string;
+  /** External standalone website operated independently by this branch (e.g. Augsburg). */
+  ownWebsite?: string;
 }
 
 export const locations: Location[] = [
@@ -25,7 +26,7 @@ export const locations: Location[] = [
     zip: "81673 München",
     phone: "+498213490642",
     phoneDisplay: "0821 349 0642",
-    email: "muenchen@podologie-healthyfeet.de",
+    email: "muenchen@healthyfeet-podologie.de",
     hours: {
       de: [
         { days: "Mo – Fr", time: "09:00 – 18:00" },
@@ -44,7 +45,6 @@ export const locations: Location[] = [
     coordinates: { lat: 48.1218, lng: 11.6181 },
     googleMapsUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2663.0!2d11.6159!3d48.1218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ddf0a1b2c3d4e%3A0x0!2sBaumkirchner+Str.+19%2C+81673+M%C3%BCnchen!5e0!3m2!1sde!2sde!4v1",
-    doctolibUrl: "https://www.doctolib.de/podologie/muenchen/healthy-feet",
   },
   {
     id: "augsburg",
@@ -73,7 +73,7 @@ export const locations: Location[] = [
     coordinates: { lat: 48.3891, lng: 10.8783 },
     googleMapsUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2660.0!2d10.8783!3d48.3891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sDonauw%C3%B6rther+Str.+49%2C+86154+Augsburg!5e0!3m2!1sde!2sde!4v1",
-    doctolibUrl: "https://www.doctolib.de/podologie/augsburg/healthy-feet",
+    ownWebsite: "https://podologie-healthyfeet.de",
   },
 ];
 

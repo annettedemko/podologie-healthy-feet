@@ -28,3 +28,13 @@ public/banner-*
 public/flyer-*
 generate-flyers.cjs
 .vercel
+.env*.local
+
+# Sensitive — HR documents, employment contracts, personal data, outreach campaign data.
+# These must never be committed to the repo.
+/outreach/
+/public/docs/
+/public/stellungnahme-assets/
+/public/Arbeitsvertrag-*
+/public/Arbeitgeber-Stellungnahme.*
+/public/Zusatzvereinbarung-*

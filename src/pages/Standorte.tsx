@@ -1,4 +1,4 @@
-import { MapPin, Phone, Clock, Mail, ArrowRight } from "lucide-react";
+import { MapPin, Phone, Clock, Mail, ArrowRight, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import SEOHead from "@/components/SEOHead";
@@ -95,16 +95,24 @@ export default function Standorte() {
                         </div>
                       </div>
 
-                      <div className="mt-6 flex gap-3">
-                        <LocalizedLink to="booking">
-                          <Button className="rounded-full px-6 gap-2">
-                            {t("header.bookAppointment")} <ArrowRight className="w-4 h-4" />
-                          </Button>
-                        </LocalizedLink>
-                        {loc.doctolibUrl && (
-                          <a href={loc.doctolibUrl} target="_blank" rel="noopener noreferrer">
-                            <Button variant="outline" className="rounded-full px-6">
-                              Doctolib
+                      <div className="mt-6 flex flex-wrap gap-3">
+                        {loc.id === "muenchen" ? (
+                          <LocalizedLink to="booking">
+                            <Button className="rounded-full px-6 gap-2">
+                              {t("header.bookAppointment")} <ArrowRight className="w-4 h-4" />
+                            </Button>
+                          </LocalizedLink>
+                        ) : (
+                          <a href={`tel:${loc.phone}`}>
+                            <Button className="rounded-full px-6 gap-2">
+                              {loc.phoneDisplay}
+                            </Button>
+                          </a>
+                        )}
+                        {loc.ownWebsite && (
+                          <a href={loc.ownWebsite} target="_blank" rel="noopener noreferrer">
+                            <Button variant="outline" className="rounded-full px-6 gap-2">
+                              {t("locations.visitWebsite")} <ExternalLink className="w-4 h-4" />
                             </Button>
                           </a>
                         )}

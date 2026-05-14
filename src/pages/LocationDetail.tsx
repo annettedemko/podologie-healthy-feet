@@ -1,5 +1,5 @@
 import { Navigate } from "react-router-dom";
-import { MapPin, Phone, Clock, Mail, ArrowRight, ExternalLink, Shield } from "lucide-react";
+import { MapPin, Phone, Clock, Mail, ArrowRight, Shield, ExternalLink, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import SEOHead from "@/components/SEOHead";
@@ -47,12 +47,20 @@ function LocationPage({ location: loc, routeKey }: { location: Location; routeKe
             <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-lg">
               {t("locationDetail.heroDescription").replace("{city}", loc.city)}
             </p>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <LocalizedLink to="booking">
-                <Button size="lg" className="rounded-full px-8 text-base gap-2">
-                  {t("header.bookAppointment")} <ArrowRight className="w-4 h-4" />
-                </Button>
-              </LocalizedLink>
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+              {loc.id === "muenchen" ? (
+                <LocalizedLink to="booking">
+                  <Button size="lg" className="rounded-full px-8 text-base gap-2">
+                    {t("header.bookAppointment")} <ArrowRight className="w-4 h-4" />
+                  </Button>
+                </LocalizedLink>
+              ) : loc.ownWebsite ? (
+                <a href={loc.ownWebsite} target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" className="rounded-full px-8 text-base gap-2">
+                    {t("locations.visitWebsite")} <ExternalLink className="w-4 h-4" />
+                  </Button>
+                </a>
+              ) : null}
               {loc.phone && (
                 <a href={`tel:${loc.phone}`}>
                   <Button variant="outline" size="lg" className="rounded-full px-8 text-base">
@@ -60,14 +68,19 @@ function LocationPage({ location: loc, routeKey }: { location: Location; routeKe
                   </Button>
                 </a>
               )}
-              {loc.doctolibUrl && (
-                <a href={loc.doctolibUrl} target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" size="lg" className="rounded-full px-8 text-base gap-2">
-                    Doctolib <ExternalLink className="w-4 h-4" />
-                  </Button>
-                </a>
-              )}
             </div>
+
+            {loc.ownWebsite && (
+              <div className="mt-6 inline-flex items-start gap-3 px-4 py-3 rounded-2xl bg-white/70 backdrop-blur-sm border border-primary/15 max-w-xl">
+                <div className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                  <Globe className="w-4 h-4 text-primary" />
+                </div>
+                <div className="text-sm">
+                  <p className="font-semibold text-foreground mb-0.5">{t("locations.ownWebsiteTitle")}</p>
+                  <p className="text-muted-foreground text-xs leading-snug">{t("locations.ownWebsiteDesc")}</p>
+                </div>
+              </div>
+            )}
           </motion.div>
         </div>
       </section>

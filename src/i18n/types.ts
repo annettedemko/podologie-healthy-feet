@@ -45,12 +45,6 @@ export interface Translations {
   "cookie.acceptAll": string;
   "cookie.onlyNecessary": string;
 
-  // Doctolib Widget
-  "doctolib.iframeTitle": string;
-  "doctolib.bookTitle": string;
-  "doctolib.bookDescription": string;
-  "doctolib.contactForm": string;
-
   // Home Page
   "home.seoTitle": string;
   "home.seoDescription": string;
@@ -128,6 +122,9 @@ export interface Translations {
   "locations.enableCookies": string;
   "locations.openInGoogleMaps": string;
   "locations.mapComingSoon": string;
+  "locations.ownWebsiteTitle": string;
+  "locations.ownWebsiteDesc": string;
+  "locations.visitWebsite": string;
 
   // Location Detail Page
   "locationDetail.heroTitle": string;
@@ -147,13 +144,101 @@ export interface Translations {
   "booking.seoDescription": string;
   "booking.title": string;
   "booking.description": string;
-  "booking.comingSoon": string;
   "booking.insuranceTitle": string;
   "booking.insuranceDescription": string;
   "booking.moreServices": string;
-  "booking.openExternal": string;
   "booking.munichOnlyTitle": string;
   "booking.munichOnlyText": string;
+  "booking.locationLabel": string;
+  "booking.howItWorksTitle": string;
+  "booking.howItWorksStep1": string;
+  "booking.howItWorksStep2": string;
+  "booking.howItWorksStep3": string;
+  // Booking Wizard — progress
+  "booking.stepCounter": string;
+  "booking.step1Label": string;
+  "booking.step2Label": string;
+  "booking.step3Label": string;
+  "booking.step4Label": string;
+  // Step 1 — Anlass
+  "booking.step1Title": string;
+  "booking.step1Description": string;
+  "booking.serviceBeratungTitle": string;
+  "booking.serviceBeratungDesc": string;
+  // Step 2 — Versicherung
+  "booking.step2Title": string;
+  "booking.step2Description": string;
+  "booking.insKasseTitle": string;
+  "booking.insKasseDesc": string;
+  "booking.insKasseBadge": string;
+  "booking.insKasseShort": string;
+  "booking.insPrivatTitle": string;
+  "booking.insPrivatDesc": string;
+  "booking.insPrivatBadge": string;
+  "booking.insPrivatShort": string;
+  "booking.extrasTitle": string;
+  "booking.firstVisitLabel": string;
+  "booking.firstVisitDesc": string;
+  "booking.diabetesLabel": string;
+  "booking.diabetesDesc": string;
+  // Step 3 — Wunschtermin (real-time slots)
+  "booking.step3Title": string;
+  "booking.step3Description": string;
+  "booking.dateLabel": string;
+  "booking.timeLabel": string;
+  "booking.free": string;
+  "booking.slotFull": string;
+  "booking.slotLast": string;
+  "booking.loadingSlots": string;
+  "booking.availabilityOffline": string;
+  "booking.noOpenWindows": string;
+  "booking.legendBookable": string;
+  "booking.legendFull": string;
+  "booking.legendClosed": string;
+  // Step 4 — Kontakt
+  "booking.step4Title": string;
+  "booking.step4Description": string;
+  "booking.summaryTitle": string;
+  "booking.summaryService": string;
+  "booking.summaryInsurance": string;
+  "booking.summaryDate": string;
+  "booking.nameLabel": string;
+  "booking.namePlaceholder": string;
+  "booking.nameHint": string;
+  "booking.phoneLabel": string;
+  "booking.phonePlaceholder": string;
+  "booking.emailLabelStar": string;
+  "booking.emailPlaceholder": string;
+  "booking.birthLabel": string;
+  "booking.birthDay": string;
+  "booking.birthMonth": string;
+  "booking.birthYear": string;
+  "booking.notesLabel": string;
+  "booking.notesPlaceholder": string;
+  "booking.consentLabel": string;
+  "booking.consentLink": string;
+  // Navigation / submit
+  "booking.back": string;
+  "booking.next": string;
+  "booking.submit": string;
+  "booking.submitting": string;
+  "booking.errorSubmit": string;
+  "booking.errorSlotTaken": string;
+  // Success
+  "booking.successTitle": string;
+  "booking.successDescription": string;
+  "booking.successRef": string;
+  "booking.successUrgent": string;
+  "booking.email": string;
+  "booking.backHome": string;
+  // Validation errors
+  "errors.service": string;
+  "errors.insurance": string;
+  "errors.slot": string;
+  "errors.name": string;
+  "errors.phone": string;
+  "errors.email": string;
+  "errors.consent": string;
 
   // About Page
   "about.seoTitle": string;
@@ -167,20 +252,6 @@ export interface Translations {
   "about.approachTitle": string;
   "about.approachP1": string;
   "about.approachP2": string;
-  "about.teamTitle": string;
-  "about.teamDescription": string;
-  "about.teamMemberName": string;
-  "about.teamMemberRole": string;
-  "about.teamMemberBio": string;
-  "about.teamMember2Name": string;
-  "about.teamMember2Role": string;
-  "about.teamMember2Bio": string;
-  "about.teamMember3Name": string;
-  "about.teamMember3Role": string;
-  "about.teamMember3Bio": string;
-  "about.teamMember4Name": string;
-  "about.teamMember4Role": string;
-  "about.teamMember4Bio": string;
   "about.valuesTitle": string;
   "about.valueEmpathyTitle": string;
   "about.valueEmpathyDesc": string;

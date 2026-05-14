@@ -293,6 +293,34 @@
     animation: slow-zoom 20s ease-out forwards;
   }
 
+  /* ── Booking Calendar day modifiers ── */
+  .hf-day-bookable:not([aria-disabled="true"]):not([aria-selected="true"]) {
+    background: hsl(var(--primary) / 0.08);
+    color: hsl(var(--primary));
+    font-weight: 600;
+    position: relative;
+  }
+  .hf-day-bookable:not([aria-disabled="true"]):not([aria-selected="true"])::after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    border-radius: 9999px;
+    background: hsl(var(--primary));
+  }
+  .hf-day-bookable:not([aria-disabled="true"]):not([aria-selected="true"]):hover {
+    background: hsl(var(--primary) / 0.18);
+  }
+  .hf-day-full {
+    background: rgb(254 226 226);
+    color: rgb(185 28 28);
+    text-decoration: line-through;
+    cursor: not-allowed !important;
+  }
+
   /* ── Subtle film grain overlay ── */
   .film-grain {
     position: absolute;

@@ -282,54 +282,46 @@ export default function Home() {
             </p>
           </AnimateOnScroll>
 
-          {/* Bento grid: first card spans 2 columns on lg */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 auto-rows-[minmax(260px,auto)]">
-            {services.slice(0, 6).map((service, i) => {
-              // First card: 2x wide (lg:col-span-2), larger
-              const isFeatured = i === 0;
-              return (
-                <AnimateOnScroll
-                  key={service.id}
-                  delay={i * 0.08}
-                  className={isFeatured ? "lg:col-span-2 lg:row-span-2" : ""}
+          {/* 3 × 2 uniform grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.slice(0, 6).map((service, i) => (
+              <AnimateOnScroll key={service.id} delay={i * 0.06}>
+                <LocalizedLink
+                  to="services"
+                  hash={service.id}
+                  className="block h-full"
+                  style={{ perspective: "1000px" }}
                 >
-                  <LocalizedLink
-                    to="services"
-                    hash={service.id}
-                    className="block h-full"
-                    style={{ perspective: "1000px" }}
-                  >
-                    <TiltCard className="group rounded-2xl overflow-hidden bg-white border border-border/50 shadow-md hover:shadow-2xl transition-shadow duration-500 h-full flex flex-col">
-                      <div className={`w-full overflow-hidden ${isFeatured ? "h-64 lg:h-80" : "h-40"}`}>
-                        <img
-                          src={service.image}
-                          alt={service.translations[lang].title}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                        />
-                      </div>
-                      <div className={`flex-1 ${isFeatured ? "p-7" : "p-5"}`}>
-                        <h3 className={`font-semibold text-foreground mb-2 group-hover:text-primary transition-colors ${isFeatured ? "text-2xl font-serif" : "text-lg"}`}>
-                          {service.translations[lang].title}
-                        </h3>
-                        <p className={`text-muted-foreground leading-relaxed ${isFeatured ? "text-base" : "text-sm"}`}>
-                          {service.translations[lang].shortDesc}
-                        </p>
-                        <div className="flex flex-wrap gap-2 mt-3">
-                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-blue-50 text-blue-600 text-xs font-medium">
-                            {t("services.privatBadge")}
+                  <TiltCard className="group rounded-2xl overflow-hidden bg-white border border-border/50 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
+                    <div className="w-full h-52 overflow-hidden">
+                      <img
+                        src={service.image}
+                        alt={service.translations[lang].title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      />
+                    </div>
+                    <div className="p-6 flex flex-col flex-1">
+                      <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                        {service.translations[lang].title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed flex-1">
+                        {service.translations[lang].shortDesc}
+                      </p>
+                      <div className="flex flex-wrap gap-2 mt-4">
+                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-blue-50 text-blue-600 text-xs font-medium">
+                          {t("services.privatBadge")}
+                        </span>
+                        {service.mitVerordnung && (
+                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-green-50 text-green-600 text-xs font-medium">
+                            {t("services.verordnungBadge")}
                           </span>
-                          {service.mitVerordnung && (
-                            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-green-50 text-green-600 text-xs font-medium">
-                              {t("services.verordnungBadge")}
-                            </span>
-                          )}
-                        </div>
+                        )}
                       </div>
-                    </TiltCard>
-                  </LocalizedLink>
-                </AnimateOnScroll>
-              );
-            })}
+                    </div>
+                  </TiltCard>
+                </LocalizedLink>
+              </AnimateOnScroll>
+            ))}
           </div>
 
           <div className="text-center mt-12">

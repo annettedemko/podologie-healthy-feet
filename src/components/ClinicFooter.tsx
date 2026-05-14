@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, ExternalLink } from "lucide-react";
 import { locations } from "@/data/locations";
 import { useLanguage, LocalizedLink } from "@/i18n";
 
@@ -84,6 +84,17 @@ export default function ClinicFooter() {
                 <p key={h.days}>{h.days}: {h.time}</p>
               ))}
             </div>
+            {augsburg.ownWebsite && (
+              <a
+                href={augsburg.ownWebsite}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex items-center gap-1.5 text-xs text-background/70 hover:text-background border border-background/20 hover:border-background/50 rounded-full px-3 py-1.5 transition-colors"
+              >
+                {t("locations.visitWebsite")}
+                <ExternalLink className="w-3 h-3" />
+              </a>
+            )}
           </div>
 
           {/* Legal */}
