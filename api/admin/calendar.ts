@@ -87,6 +87,8 @@ function renderPage(rows: DbBookingRow[]): string {
   const dates = Array.from(iterateOpenDates());
   const byDateHour = new Map<string, DbBookingRow[]>();
   for (const r of rows) {
+    // Cancelled appointments stay in the stats bar but are hidden from the grid.
+    if (r.status === "cancelled") continue;
     const date = new Date(r.preferred_date);
     const ymd = new Intl.DateTimeFormat("sv-SE", { timeZone: "Europe/Berlin" }).format(date); // YYYY-MM-DD
     const hour = Number(
