@@ -43,3 +43,4 @@ generate-flyers.cjs
 /scripts/generate-zusatzvereinbarung-pdf.mjs
 /scripts/send-outreach.mjs
 /scripts/send-outreach-test.mjs
+/generate-pdf.mjs

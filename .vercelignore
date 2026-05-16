@@ -1,0 +1,10 @@
+# Files that exist locally but must NOT be deployed to the live site.
+# Vercel reads this like .gitignore — anything matched is excluded from the build.
+# HR documents, employment contracts, personal data — never expose publicly.
+
+/public/docs/
+/public/stellungnahme-assets/
+/public/Arbeitsvertrag-*
+/public/Arbeitgeber-Stellungnahme.*
+/public/Zusatzvereinbarung-*
+/outreach/
