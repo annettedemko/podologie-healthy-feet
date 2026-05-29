@@ -2,7 +2,7 @@
 // All hours in Europe/Berlin local time. Slots are 1h.
 
 export const OPEN_WINDOWS: Array<{ from: string; to: string }> = [
-  { from: "2026-06-01", to: "2026-06-27" }, // Mo–Sa inkl. (Sa+So gefiltert)
+  { from: "2026-06-02", to: "2026-06-27" }, // Mo–Sa inkl. (Sa+So gefiltert)
 ];
 
 export const WORK_START_HOUR = 9;   // first slot starts 09:00

@@ -1,7 +1,7 @@
 // Mirror of src/lib/booking/config.ts — kept identical so backend & frontend agree.
 
 export const OPEN_WINDOWS: Array<{ from: string; to: string }> = [
-  { from: "2026-06-01", to: "2026-06-27" },
+  { from: "2026-06-02", to: "2026-06-27" },
 ];
 
 export const WORK_START_HOUR = 9;

@@ -132,6 +132,7 @@ export default function Home() {
                 Podologie
               </motion.p>
               <AnimatedText
+                key={lang}
                 text={`${t("home.heroTitle1")} ${t("home.heroTitle2")}`}
                 as="h1"
                 className="text-[3.375rem] sm:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold text-foreground leading-[1.05] mb-3 sm:mb-5"
