@@ -124,6 +124,7 @@ function renderPage(rows: DbBookingRow[], filter: Status | "all"): string {
   <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap;">
     <a href="/api/admin/bookings" style="padding:6px 14px;border-radius:9999px;background:#1e6bf5;color:#fff;text-decoration:none;border:1px solid #1e6bf5;font-size:13px;font-weight:500;">Liste</a>
     <a href="/api/admin/calendar" style="padding:6px 14px;border-radius:9999px;background:#fff;color:#475569;text-decoration:none;border:1px solid #e2e8f0;font-size:13px;font-weight:500;">Kalender</a>
+    <a href="/api/admin/reminders" style="padding:6px 14px;border-radius:9999px;background:#fff;color:#475569;text-decoration:none;border:1px solid #e2e8f0;font-size:13px;font-weight:500;">✉️ Erinnerungen</a>
     <a href="/de/" target="_blank" rel="noopener" style="padding:6px 14px;border-radius:9999px;background:#fff;color:#475569;text-decoration:none;border:1px solid #e2e8f0;font-size:13px;font-weight:500;">🌐 Website ↗</a>
     <span class="small" style="margin-left:8px;">${rows.length} gesamt</span>
   </div>

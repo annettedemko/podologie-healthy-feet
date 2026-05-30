@@ -189,6 +189,7 @@ function renderPage(rows: DbBookingRow[]): string {
   <div class="views">
     <a href="/api/admin/bookings">Liste</a>
     <a href="/api/admin/calendar" class="active">Kalender</a>
+    <a href="/api/admin/reminders">✉️ Erinnerungen</a>
     <a href="/de/" target="_blank" rel="noopener">🌐 Website ↗</a>
   </div>
 </header>

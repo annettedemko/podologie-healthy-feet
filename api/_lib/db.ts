@@ -32,6 +32,7 @@ export interface DbBookingRow {
   ip: string | null;
   user_agent: string | null;
   email_sent_at: string | null;
+  reminder_sent_at: string | null;
   created_at: string;
   updated_at: string;
 }
