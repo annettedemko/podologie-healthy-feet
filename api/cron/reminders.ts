@@ -24,15 +24,16 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const apiKey = process.env.RESEND_API_KEY;
   const from = process.env.BOOKING_FROM ?? "Healthy Feet <muenchen@healthyfeet-podologie.de>";
 
-  // Find bookings whose slot is between 23h and 25h from now, not yet reminded, not cancelled.
-  // 23–25h window means cron run at 09:00 Berlin picks up everything for "tomorrow".
+  // All bookings on tomorrow's Berlin date — independent of slot hour, so afternoon
+  // slots aren't missed by a narrow time window.
   type Row = Pick<DbBookingRow, "ref" | "name" | "email" | "service" | "preferred_date" | "lang">;
   const rows = (await sql`
     SELECT ref, name, email, service, preferred_date::text AS preferred_date, lang
     FROM bookings
     WHERE reminder_sent_at IS NULL
       AND status IN ('new', 'confirmed', 'rescheduled')
-      AND preferred_date BETWEEN (NOW() + INTERVAL '23 hours') AND (NOW() + INTERVAL '25 hours')
+      AND (preferred_date AT TIME ZONE 'Europe/Berlin')::date
+          = ((NOW() AT TIME ZONE 'Europe/Berlin')::date + INTERVAL '1 day')::date
   `) as unknown as Row[];
 
   if (rows.length === 0) {
