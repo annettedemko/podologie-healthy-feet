@@ -3,9 +3,8 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import { getSql, type DbBookingRow } from "../_lib/db.js";
 import {
-  WORK_START_HOUR,
-  WORK_END_HOUR,
-  capacityForHour,
+  slotTimes,
+  capacityForSlot,
   OPEN_WINDOWS,
   BERLIN_OFFSET,
 } from "../_lib/bookingConfig.js";
@@ -83,27 +82,48 @@ function dayLabel(ymd: string): { weekday: string; date: string } {
 }
 
 function renderPage(rows: DbBookingRow[]): string {
-  // Group by date (Berlin), then by hour.
+  // 45-min slot grid: 12 slot times per day in Berlin local time.
   const dates = Array.from(iterateOpenDates());
-  const byDateHour = new Map<string, DbBookingRow[]>();
+  const times = slotTimes(); // ["09:00", "09:45", ...]
+  const cap = capacityForSlot();
+
+  // For off-grid bookings (e.g. Doctolib imports at 12:15, 13:00), round their
+  // start time DOWN to the nearest scheduled slot for display bucketing only.
+  function bucketTime(bookingHHMM: string): string {
+    const [h, m] = bookingHHMM.split(":").map(Number);
+    const mins = h * 60 + m;
+    let pick = times[0];
+    for (const t of times) {
+      const [th, tm] = t.split(":").map(Number);
+      const tmin = th * 60 + tm;
+      if (tmin <= mins) pick = t;
+      else break;
+    }
+    return pick;
+  }
+
+  const byDateTime = new Map<string, DbBookingRow[]>();
   for (const r of rows) {
     // Cancelled appointments stay in the stats bar but are hidden from the grid.
     if (r.status === "cancelled") continue;
     const date = new Date(r.preferred_date);
     const ymd = new Intl.DateTimeFormat("sv-SE", { timeZone: "Europe/Berlin" }).format(date); // YYYY-MM-DD
-    const hour = Number(
-      new Intl.DateTimeFormat("en-GB", { hour: "2-digit", hour12: false, timeZone: "Europe/Berlin" }).format(date)
-    );
-    const k = `${ymd}_${hour}`;
-    if (!byDateHour.has(k)) byDateHour.set(k, []);
-    byDateHour.get(k)!.push(r);
+    const hhmm = new Intl.DateTimeFormat("en-GB", {
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: false,
+      timeZone: "Europe/Berlin",
+    }).format(date); // "HH:MM"
+    const slot = bucketTime(hhmm);
+    const k = `${ymd}_${slot}`;
+    if (!byDateTime.has(k)) byDateTime.set(k, []);
+    byDateTime.get(k)!.push(r);
   }
 
   const totals = rows.reduce<Record<string, number>>((a, r) => ({ ...a, [r.status]: (a[r.status] ?? 0) + 1 }), {});
   const total = rows.length;
 
-  const hours: number[] = [];
-  for (let h = WORK_START_HOUR; h < WORK_END_HOUR; h++) hours.push(h);
+  // (slot grid times already computed above)
 
   return `<!doctype html>
 <html lang="de"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
@@ -207,7 +227,7 @@ function renderPage(rows: DbBookingRow[]): string {
     <thead>
       <tr>
         <th class="day">Tag</th>
-        ${hours.map(h => `<th>${String(h).padStart(2, "0")}:00${capacityForHour(h) === 1 ? ' 🍽️' : ''}</th>`).join("")}
+        ${times.map(t => `<th>${t}</th>`).join("")}
       </tr>
     </thead>
     <tbody>
@@ -218,11 +238,9 @@ function renderPage(rows: DbBookingRow[]): string {
             <div class="wd">${escape(dl.weekday)}</div>
             <div class="dt">${escape(dl.date)}</div>
           </td>
-          ${hours.map(h => {
-            const cell = byDateHour.get(`${ymd}_${h}`) ?? [];
-            const cap = capacityForHour(h);
-            const isLunch = h === 13;
-            return `<td class="slot${isLunch ? ' lunch' : ''}">
+          ${times.map(t => {
+            const cell = byDateTime.get(`${ymd}_${t}`) ?? [];
+            return `<td class="slot">
               ${cell.length === 0
                 ? `<div class="empty">${cap}× frei</div>`
                 : cell.map(r => {

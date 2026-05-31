@@ -2,16 +2,15 @@ import type { VercelRequest, VercelResponse } from "@vercel/node";
 import { getSql } from "./_lib/db.js";
 import {
   OPEN_WINDOWS,
-  WORK_START_HOUR,
-  WORK_END_HOUR,
-  capacityForHour,
+  slotTimes,
+  capacityForSlot,
   BERLIN_OFFSET,
 } from "./_lib/bookingConfig.js";
 
 interface SlotResp {
   iso: string;
   date: string;
-  hour: number;
+  time: string;
   capacity: number;
   taken: number;
   available: number;
@@ -42,15 +41,16 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   const sql = getSql();
 
-  // 1) Build full slot list (date × hour) for all open dates.
+  // 1) Build full slot list (date × time) for all open dates.
   const all: SlotResp[] = [];
+  const times = slotTimes();
+  const cap = capacityForSlot();
   for (const ymd of iterateOpenDates()) {
-    for (let h = WORK_START_HOUR; h < WORK_END_HOUR; h++) {
-      const cap = capacityForHour(h);
+    for (const time of times) {
       all.push({
-        iso: `${ymd}T${String(h).padStart(2, "0")}:00:00${BERLIN_OFFSET}`,
+        iso: `${ymd}T${time}:00${BERLIN_OFFSET}`,
         date: ymd,
-        hour: h,
+        time,
         capacity: cap,
         taken: 0,
         available: cap,

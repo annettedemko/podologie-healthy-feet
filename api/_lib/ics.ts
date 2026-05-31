@@ -50,7 +50,7 @@ function fold(line: string): string {
 
 export function buildIcs(input: IcsInput): string {
   const start = new Date(input.startIso);
-  const end = new Date(start.getTime() + (input.durationMin ?? 60) * 60_000);
+  const end = new Date(start.getTime() + (input.durationMin ?? 45) * 60_000);
   const now = new Date();
   const lines = [
     "BEGIN:VCALENDAR",
@@ -81,7 +81,7 @@ export function buildIcs(input: IcsInput): string {
 /** Google Calendar "Add Event" URL (works in any browser, opens prefilled event). */
 export function googleCalendarUrl(input: IcsInput): string {
   const start = new Date(input.startIso);
-  const end = new Date(start.getTime() + (input.durationMin ?? 60) * 60_000);
+  const end = new Date(start.getTime() + (input.durationMin ?? 45) * 60_000);
   const params = new URLSearchParams({
     action: "TEMPLATE",
     text: input.summary,

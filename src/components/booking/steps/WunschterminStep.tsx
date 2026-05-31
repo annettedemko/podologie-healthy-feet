@@ -12,7 +12,7 @@ import { OPEN_WINDOWS, slotsForDate } from "@/lib/booking/config";
 type RemoteSlot = {
   iso: string;
   date: string;
-  hour: number;
+  time: string;
   capacity: number;
   taken: number;
   available: number;
@@ -43,9 +43,6 @@ function isInOpenWindow(ymd: string): boolean {
   return false;
 }
 
-function formatHour(h: number): string {
-  return `${String(h).padStart(2, "0")}:00`;
-}
 
 const calendarBoundaries = (() => {
   const all = OPEN_WINDOWS.map((w) => w.from)
@@ -102,7 +99,7 @@ export default function WunschterminStep() {
             const dow = d.getDay();
             if (dow === 0 || dow === 6) continue;
             fallback[ymd] = slotsForDate(ymd).map((s) => ({
-              iso: s.iso, date: ymd, hour: s.hour,
+              iso: s.iso, date: ymd, time: s.time,
               capacity: s.capacity, taken: 0, available: s.capacity,
             }));
           }
@@ -284,7 +281,7 @@ export default function WunschterminStep() {
                       <p className={`font-semibold tabular-nums ${
                         isSelected ? "text-primary-foreground" : isFull ? "" : "text-foreground"
                       }`}>
-                        {formatHour(slot.hour)}
+                        {slot.time}
                       </p>
                       {isSelected && (
                         <Check className="w-3.5 h-3.5 absolute top-1.5 right-1.5 text-primary-foreground" />
